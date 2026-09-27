@@ -1,47 +1,35 @@
 # nowo Coworking Space
 
-> The only coworking space in Widnau, Switzerland. 16 desks, 249 m², 24/7 access via the KleverKey app, own booking platform.
+> nowo ist der Coworking Space in Widnau im St. Galler Rheintal (Schweiz): 16 Arbeitsplätze auf 249 m², 24/7-Zugang per App, Tagespässe ab CHF 35 und ein Sitzungszimmer, an der Bahnhofstrasse 14.
 
-## Facts
-- Address: Bahnhofstrasse 14, 9443 Widnau, Switzerland
-- Contact: hello@nowo.space
-- Booking: https://booking.nowo.space
-- Access: 24/7 via KleverKey app, no key or badge needed
-- Size: 249 m², 16 desks + 1 meeting room
-- Getting there: 7–10 min walk from Heerbrugg station, parking available, minutes from the Austrian border
-- Google rating: 5.0 (24 reviews)
+## Fakten
+- Betreiberin: Nowo Coworking Space GmbH, gegründet 2025, Gründer Pratheep Sinnathurai
+- Adresse: Bahnhofstrasse 14, 9443 Widnau, SG, Schweiz
+- Kontakt: hello@nowo.space · Telefon 079 818 91 71 (+41 79 818 91 71)
+- Buchung: https://booking.nowo.space
+- Zugang: 24/7 für Mitglieder per KleverKey-App auf dem Smartphone, ohne Schlüssel oder Badge
+- Fläche: 249 m², 16 Arbeitsplätze + Sitzungszimmer
+- Anreise: 7 bis 10 Gehminuten vom Bahnhof Heerbrugg, Parkplätze vorhanden, wenige Minuten zur Grenze nach Österreich
+- Einzugsgebiet: Widnau, Heerbrugg, Balgach, Au, Diepoldsau, St. Galler Rheintal
+- Inklusive: schnelles Internet, höhenverstellbare Tische, Monitore, Drucker, Kaffee
+- Google-Bewertung: 5.0
 
-## Plans (prices exclude VAT, CHF)
-- Half-day pass: 20 CHF per half day
-- Day pass: 35 CHF per day
-- Flex Desk: 300 CHF/month — open desk, 24/7 access
-- Fix Desk: 450 CHF/month — dedicated desk, lockable storage, mailing address
-- Once a Week: 125 CHF/month — 1 fixed day/week
-- Twice a Week: 210 CHF/month — 2 fixed days/week
-- Off-peak (Randzeit): 179 CHF/month — from 5pm to end of day
-- Weekend: 125 CHF/month — Saturday & Sunday
-- Virtual Office: 100 CHF/month — business address in Widnau, mail handling, no desk
+## Preise (CHF, exkl. MwSt.)
+- Halbtagespass: 20 pro Halbtag
+- Tagespass: 35 pro Tag
+- Flex Desk: 300 pro Monat (offener Platz, 24/7)
+- Fix Desk: 450 pro Monat (fester Platz, abschliessbarer Stauraum, Postadresse)
+- Once a Week: 125 pro Monat (1 Tag pro Woche)
+- Twice a Week: 210 pro Monat (2 Tage pro Woche)
+- Randzeit: 179 pro Monat (ab 17:00 bis Tagesende)
+- Weekend: 125 pro Monat (Samstag & Sonntag)
+- Virtual Office: 100 pro Monat (Domiziladresse in Widnau, Postannahme)
+- Sitzungszimmer: 35 pro Stunde, ab 4 Std. 30 pro Stunde, ab 8 Std. 25 pro Stunde (31 m², 12 Stühle, Kamera, 65"-Bildschirm mit Miracast, Gratis-Kaffee)
 
-## Meeting room
-- 31 m², 12 chairs, camera for video calls, 65" screen with Miracast, free coffee
-- CHF 35/hour, CHF 30/hour from 4 hours, CHF 25/hour from 8 hours (excl. VAT)
-- Booked by the hour via the member portal on booking.nowo.space
+Mindestlaufzeit: Monatsabo 1 Monat, Jahresabo 1 Jahr. Tages- und Halbtagespässe ohne Bindung.
 
-## FAQ
-Q: How do I get in?
-A: The KleverKey app on your phone unlocks the door any time, 24/7, no key or badge needed.
-
-Q: How do I book a desk?
-A: Through booking.nowo.space — pick a membership or day pass, book in a few clicks.
-
-Q: Is there a minimum term?
-A: Monthly membership: one month. Annual membership: one year. Day and half-day passes: no commitment.
-
-Q: What's included?
-A: Fast internet, height-adjustable desks, monitors, a printer, meeting-room use, coffee.
-
-Q: Can I get a business address?
-A: Yes, the Virtual Office (100 CHF/month) includes a domicile address in Widnau and mail handling.
-
-## Pages
-- Homepage: https://nowo.space/ (plans, spaces, reviews, FAQ, location, contact)
+## Seiten
+- [Startseite (DE)](https://nowo.space/): Angebote, Räume, Sitzungszimmer, Bewertungen, FAQ, Standort, Kontakt
+- [Homepage (EN)](https://nowo.space/en/)
+- [Impressum](https://nowo.space/impressum.html)
+- [Datenschutz](https://nowo.space/datenschutz.html)

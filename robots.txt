@@ -1,4 +1,3 @@
-# nowo Coworking Space – https://nowo.space
 User-agent: *
 Allow: /
 
@@ -17,16 +16,10 @@ Allow: /
 User-agent: Claude-SearchBot
 Allow: /
 
-User-agent: Claude-User
-Allow: /
-
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
-Allow: /
-
-User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://nowo.space/sitemap.xml

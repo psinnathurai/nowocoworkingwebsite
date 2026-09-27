@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nowo.space/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/en/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/"/>
+  </url>
+  <url><loc>https://nowo.space/llms.txt</loc><lastmod>2026-09-27</lastmod></url>
+</urlset>

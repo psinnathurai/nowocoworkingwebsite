@@ -156,6 +156,17 @@ textarea.input { min-height: 90px; resize: vertical; }
 .meet-prices .plan { padding-bottom: calc(1.4 * var(--leading)); }
 .meet-how { margin-top: var(--leading); font-size: 14px; color: color-mix(in srgb, var(--color-text) 72%, transparent); max-width: 62ch; }
 @media (max-width: 820px) { .plans { grid-template-columns: 1fr; } }
+.plan-groups { display: flex; flex-direction: column; gap: calc(1.4 * var(--leading)); }
+.plan-group { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: var(--leading) clamp(24px, 4vw, 64px); align-items: start; padding-top: var(--leading); border-top: 2px solid var(--color-divider); }
+.group-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(22px, 1.6vw, 28px); line-height: 1.2; letter-spacing: -0.01em; margin: 0; }
+.group-desc { font-size: 15px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 75%, transparent); margin: var(--half) 0 0; max-width: 28ch; }
+.plans.n1 { grid-template-columns: 1fr; width: calc((100% + 4px) / 3); }
+.plans.n2 { grid-template-columns: repeat(2, 1fr); width: calc((100% + 2px) * 2 / 3); }
+.plans.n3 { grid-template-columns: repeat(3, 1fr); }
+.plan-badge { align-self: flex-start; background: var(--color-accent-700); color: var(--color-bg); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; margin: 0 0 12px; }
+.plan.featured { background: var(--color-accent-100); }
+@media (max-width: 1080px) { .plan-group { grid-template-columns: 1fr; } }
+@media (max-width: 820px) { .plans.n1, .plans.n2, .plans.n3 { grid-template-columns: 1fr; width: auto; } }
 
 .split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--leading) clamp(24px, 5vw, 80px); align-items: center; }
 .split-figure { overflow: hidden; }
@@ -237,3 +248,22 @@ textarea.input { min-height: 90px; resize: vertical; }
 .legal li { margin-bottom: 4px; }
 .legal .updated { font-size: 13.5px; color: color-mix(in srgb, var(--color-text) 65%, transparent); margin: -24px 0 32px; }
 .legal a { word-break: break-word; }
+
+/* Near Office, subpages */
+.hero-slogan { font-weight: 700; font-size: 14px; color: var(--color-accent-700); margin-top: 4px; }
+.dual { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: var(--color-divider); border: 2px solid var(--color-divider); }
+.dual-cell { background: var(--color-bg); padding: calc(1.4 * var(--leading)) clamp(20px, 2.4vw, 32px); display: flex; flex-direction: column; align-items: flex-start; gap: var(--half); }
+.dual-cell .plan-feats { margin: 0 0 var(--half); }
+.dual-cell .btn { margin-top: auto; }
+@media (max-width: 820px) { .dual { grid-template-columns: 1fr; } }
+.src-note { font-size: 13px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 72%, transparent); max-width: 62ch; margin: var(--half) 0 0; }
+.page-hero { padding: calc(2.4 * var(--leading)) 0 calc(1.8 * var(--leading)); }
+.page-hero h1 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(36px, 5vw, 84px); line-height: 1.04; letter-spacing: -0.02em; margin: 0; max-width: 20ch; overflow-wrap: break-word; text-wrap: balance; }
+.page-hero .row { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: calc(1.2 * var(--leading)); }
+.crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; margin-bottom: var(--leading); color: color-mix(in srgb, var(--color-text) 70%, transparent); }
+.facts { display: grid; grid-template-columns: minmax(0, 12em) minmax(0, 1fr); gap: 10px var(--space-4); margin: var(--leading) 0 0; }
+.facts dt { font-weight: 700; } .facts dd { margin: 0; }
+@media (max-width: 480px) { .facts { grid-template-columns: 1fr; gap: 2px; } .facts dd { margin-bottom: 10px; } }
+.plans.n1 { grid-template-columns: 1fr; max-width: 420px; }
+.site-footer .foot-pages { flex-basis: 100%; margin-left: 0; }
+.meet-actions { margin-top: calc(0.6 * var(--leading)); display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }

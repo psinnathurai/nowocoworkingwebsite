@@ -1,6 +1,6 @@
-# nowo Coworking Space
+# Nowo Coworking Space
 
-> nowo ist der Coworking Space in Widnau im St. Galler Rheintal (Schweiz): 16 Arbeitsplätze auf 249 m², 24/7-Zugang per App, Tagespässe ab CHF 35 und ein Sitzungszimmer, an der Bahnhofstrasse 14.
+> Nowo ist ein Coworking Space in Widnau im St. Galler Rheintal (Schweiz): 16 Arbeitsplätze auf 249 m², 24/7-Zugang per App, Tagespässe ab CHF 35 und ein Sitzungszimmer, an der Bahnhofstrasse 14.
 
 ## Fakten
 - Betreiberin: Nowo Coworking Space GmbH, gegründet 2025, Gründer Pratheep Sinnathurai
@@ -9,19 +9,24 @@
 - Buchung: https://booking.nowo.space
 - Zugang: 24/7 für Mitglieder per KleverKey-App auf dem Smartphone, ohne Schlüssel oder Badge
 - Fläche: 249 m², 16 Arbeitsplätze + Sitzungszimmer
-- Anreise: 7 bis 10 Gehminuten vom Bahnhof Heerbrugg, Parkplätze vorhanden, wenige Minuten zur Grenze nach Österreich
+- Anreise: 7 bis 10 Gehminuten vom Bahnhof Heerbrugg, 21 kostenlose Parkplätze, 7 bis 10 Gehminuten ab Bahnhof Heerbrugg, wenige Minuten zur Grenze nach Österreich
 - Einzugsgebiet: Widnau, Heerbrugg, Balgach, Au, Diepoldsau, St. Galler Rheintal
-- Inklusive: schnelles Internet, höhenverstellbare Tische, Monitore, Drucker, Kaffee
+- Inklusive: schnelles Internet, höhenverstellbare Tische, 27-Zoll-Bildschirm an jedem Platz, Kaffee
+- Nicht inklusive (kostet extra): Sitzungszimmer, Drucken, abschliessbarer Stauraum, Postadresse beim Fix Desk
 - Google-Bewertung: 5.0
+- Slogan: Near Office statt Home Office
+- Firmen: Teamangebot nach Anforderungen (Einzelplätze, Fix Desks, Geschäftsadresse, Sitzungszimmer), Preis auf Anfrage
+- Grenzgänger: wenige Minuten von der Grenze nach Österreich; Arbeitstage im Nowo zählen als Arbeit in der Schweiz, nicht als Homeoffice im Wohnstaat (50-%-Regel Telearbeit, Quelle BSV: https://www.bsv.admin.ch/de/telearbeit)
+- Virtual Office: Postannahme, Handelsregister-Eintrag möglich, Firmenschild und Briefkasten, Sitzungszimmer zu Mitgliederpreisen
+- Sitzungszimmer: nur für Mitglieder buchbar
 
 ## Preise (CHF, exkl. MwSt.)
 - Halbtagespass: 20 pro Halbtag
 - Tagespass: 35 pro Tag
 - Flex Desk: 300 pro Monat (offener Platz, 24/7)
-- Fix Desk: 450 pro Monat (fester Platz, abschliessbarer Stauraum, Postadresse)
+- Fix Desk: 450 pro Monat (fester Platz, 24/7)
 - Once a Week: 125 pro Monat (1 Tag pro Woche)
 - Twice a Week: 210 pro Monat (2 Tage pro Woche)
-- Randzeit: 179 pro Monat (ab 17:00 bis Tagesende)
 - Weekend: 125 pro Monat (Samstag & Sonntag)
 - Virtual Office: 100 pro Monat (Domiziladresse in Widnau, Postannahme)
 - Sitzungszimmer: 35 pro Stunde, ab 4 Std. 30 pro Stunde, ab 8 Std. 25 pro Stunde (31 m², 12 Stühle, Kamera, 65"-Bildschirm mit Miracast, Gratis-Kaffee)
@@ -31,5 +36,17 @@ Mindestlaufzeit: Monatsabo 1 Monat, Jahresabo 1 Jahr. Tages- und Halbtagespässe
 ## Seiten
 - [Startseite (DE)](https://nowo.space/): Angebote, Räume, Sitzungszimmer, Bewertungen, FAQ, Standort, Kontakt
 - [Homepage (EN)](https://nowo.space/en/)
+- [Sitzungszimmer mieten Rheintal](https://nowo.space/sitzungszimmer-rheintal.html)
+- [Domiziladresse Rheintal](https://nowo.space/domiziladresse-rheintal.html)
+- [Coworking für Grenzgänger](https://nowo.space/coworking-grenzgaenger.html)
+- [Coworking Heerbrugg](https://nowo.space/coworking-heerbrugg.html)
+- [Coworking für Firmen](https://nowo.space/coworking-firmen.html)
+- [Meeting room Rhine Valley (EN)](https://nowo.space/en/meeting-room-rhine-valley.html)
+- [Business address Rhine Valley (EN)](https://nowo.space/en/business-address-rhine-valley.html)
+- [Coworking for cross-border commuters (EN)](https://nowo.space/en/coworking-cross-border-commuters.html)
+- [Coworking Heerbrugg (EN)](https://nowo.space/en/coworking-heerbrugg.html)
+- [Coworking for companies (EN)](https://nowo.space/en/coworking-for-companies.html)
 - [Impressum](https://nowo.space/impressum.html)
 - [Datenschutz](https://nowo.space/datenschutz.html)
+
+Stand: 16. Oktober 2026

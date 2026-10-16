@@ -2,17 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nowo.space/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/"/>
   </url>
   <url>
     <loc>https://nowo.space/en/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/sitzungszimmer-rheintal.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/sitzungszimmer-rheintal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/meeting-room-rhine-valley.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/sitzungszimmer-rheintal.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/en/meeting-room-rhine-valley.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/sitzungszimmer-rheintal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/meeting-room-rhine-valley.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/sitzungszimmer-rheintal.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/domiziladresse-rheintal.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/domiziladresse-rheintal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/business-address-rhine-valley.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/domiziladresse-rheintal.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/en/business-address-rhine-valley.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/domiziladresse-rheintal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/business-address-rhine-valley.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/domiziladresse-rheintal.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/coworking-firmen.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/coworking-firmen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/coworking-for-companies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/coworking-firmen.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/en/coworking-for-companies.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/coworking-firmen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/coworking-for-companies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/coworking-firmen.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/coworking-grenzgaenger.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/coworking-grenzgaenger.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/coworking-cross-border-commuters.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/coworking-grenzgaenger.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/en/coworking-cross-border-commuters.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/coworking-grenzgaenger.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/coworking-cross-border-commuters.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/coworking-grenzgaenger.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/coworking-heerbrugg.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/coworking-heerbrugg.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/coworking-heerbrugg.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/coworking-heerbrugg.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/en/coworking-heerbrugg.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/coworking-heerbrugg.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/coworking-heerbrugg.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/coworking-heerbrugg.html"/>
   </url>
   <url>
     <loc>https://nowo.space/impressum.html</loc>

@@ -85,6 +85,48 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/coworking-heerbrugg.html"/>
   </url>
   <url>
+    <loc>https://nowo.space/angebote.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/angebote.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/plans.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/angebote.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/en/plans.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/angebote.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/plans.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/angebote.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/standort.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/standort.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/location.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/standort.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/en/location.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/standort.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/location.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/standort.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/ueber-uns.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/ueber-uns.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/ueber-uns.html"/>
+  </url>
+  <url>
+    <loc>https://nowo.space/en/about.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://nowo.space/ueber-uns.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nowo.space/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nowo.space/ueber-uns.html"/>
+  </url>
+  <url>
     <loc>https://nowo.space/impressum.html</loc>
     <lastmod>2026-09-27</lastmod>
   </url>

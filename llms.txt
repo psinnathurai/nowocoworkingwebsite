@@ -34,8 +34,14 @@
 Mindestlaufzeit: Monatsabo 1 Monat, Jahresabo 1 Jahr. Tages- und Halbtagespässe ohne Bindung.
 
 ## Seiten
-- [Startseite (DE)](https://nowo.space/): Angebote, Räume, Sitzungszimmer, Bewertungen, FAQ, Standort, Kontakt
+- [Startseite (DE)](https://nowo.space/): Überblick, Räume, Firmen und Grenzgänger, Bewertungen, Kontakt
+- [Angebote & Mitgliedschaften](https://nowo.space/angebote.html)
+- [Standort & Anfahrt](https://nowo.space/standort.html)
+- [Über uns](https://nowo.space/ueber-uns.html)
 - [Homepage (EN)](https://nowo.space/en/)
+- [Plans & memberships (EN)](https://nowo.space/en/plans.html)
+- [Location (EN)](https://nowo.space/en/location.html)
+- [About us (EN)](https://nowo.space/en/about.html)
 - [Sitzungszimmer mieten Rheintal](https://nowo.space/sitzungszimmer-rheintal.html)
 - [Domiziladresse Rheintal](https://nowo.space/domiziladresse-rheintal.html)
 - [Coworking für Grenzgänger](https://nowo.space/coworking-grenzgaenger.html)

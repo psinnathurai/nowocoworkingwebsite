@@ -34,9 +34,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer; text-decoration: none; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 14px; line-height: 1.2; color: var(--color-text); background: transparent; border: 1px solid transparent; padding: var(--space-2) calc(var(--space-3) * 1.2); border-radius: 0; white-space: nowrap; transition: transform 0.15s ease; }
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: translateY(0); }
-.btn-primary { background: var(--color-accent); color: var(--color-bg); }
-.btn-primary:hover { background: var(--color-accent-600); color: var(--color-bg); }
-.btn-primary:active { background: var(--color-accent-700); }
+.btn-primary { background: var(--color-accent-700); color: var(--color-bg); }
+.btn-primary:hover { background: var(--color-accent-800); color: var(--color-bg); }
+.btn-primary:active { background: var(--color-accent-900); }
 .btn-secondary { border-color: var(--color-divider); }
 .btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); color: var(--color-text); }
 .btn-ghost { color: var(--color-accent); padding-inline: var(--space-1); }
@@ -267,3 +267,15 @@ textarea.input { min-height: 90px; resize: vertical; }
 .plans.n1 { grid-template-columns: 1fr; max-width: 420px; }
 .site-footer .foot-pages { flex-basis: 100%; margin-left: 0; }
 .meet-actions { margin-top: calc(0.6 * var(--leading)); display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+/* text links */
+p a:not(.btn), dd a, li a:not(.btn), .faq-a a, .meet-actions a:not(.btn) { text-decoration: underline; }
+.topnav a, .mobile-menu a, .site-footer a { text-decoration: none; }
+
+/* contrast fix */
+.display .em { color: var(--color-accent-700); }
+.btn-ghost { color: var(--color-accent-700); }
+.btn-ghost:hover { color: var(--color-accent-800); }
+.rating-stars { color: var(--color-accent-800); }
+.band-clay .kicker { color: var(--color-accent-800); }
+.nav-brand { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 22px; letter-spacing: -0.01em; color: var(--color-text); text-decoration: none; margin-right: var(--space-3); }
+.nav-brand:hover { color: var(--color-accent-700); }

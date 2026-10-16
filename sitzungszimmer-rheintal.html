@@ -23,6 +23,7 @@
 <meta name="twitter:title" content="Sitzungszimmer mieten im Rheintal | Nowo Widnau">
 <meta name="twitter:description" content="Sitzungszimmer in Widnau: 31 m², 12 Stühle, 65-Zoll-Bildschirm, Kamera für Video-Calls. Ab CHF 25 pro Stunde, für Nowo-Mitglieder.">
 <meta name="twitter:image" content="https://nowo.space/assets/og-image.jpg">
+<link rel="preconnect" href="https://nowocoworkingspace-dkcscqdjdsbnhveu.westeurope-01.azurewebsites.net" crossorigin>
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" type="image/png" href="assets/img/nowo-logo.png">
@@ -64,7 +65,10 @@
    ]
   },
   {
-   "@type": "CoworkingSpace",
+   "@type": [
+    "LocalBusiness",
+    "CoworkingSpace"
+   ],
    "@id": "https://nowo.space/#business",
    "name": "Nowo Coworking Space",
    "url": "https://nowo.space/",
@@ -116,16 +120,17 @@
 <script src="assets/main.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="index.html#main">Zum Inhalt springen</a>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
 <header class="topbar">
   <div class="topbar-in">
+    <a class="nav-brand" href="index.html" aria-label="Nowo Startseite">Nowo</a>
     <span class="avail-badge" id="avail-badge" aria-live="polite"></span>
     <nav class="topnav" aria-label="Hauptnavigation">
-      <a class="nav-link" href="index.html#angebote">Angebote</a>
-      <a class="nav-link" href="index.html#raeume">Räume</a>
+      <a class="nav-link" href="angebote.html">Angebote</a>
       <a class="nav-link" href="sitzungszimmer-rheintal.html">Sitzungszimmer</a>
       <a class="nav-link" href="coworking-firmen.html">Für Firmen</a>
-      <a class="nav-link" href="index.html#standort">Standort</a>
+      <a class="nav-link" href="standort.html">Standort</a>
+      <a class="nav-link" href="ueber-uns.html">Über uns</a>
       <a class="nav-link" href="index.html#kontakt">Kontakt</a>
       <span class="langtog" role="group" aria-label="Sprache"><a class="langbtn" href="sitzungszimmer-rheintal.html" hreflang="de-CH" lang="de" aria-current="true">DE</a><a class="langbtn" href="en/meeting-room-rhine-valley.html" hreflang="en" lang="en">EN</a></span>
       <a class="btn btn-primary" href="https://booking.nowo.space" target="_blank" rel="noopener">Platz buchen</a>
@@ -133,12 +138,11 @@
     </nav>
   </div>
   <nav class="mobile-menu" id="mobile-menu" aria-label="Menü" hidden>
-    <a href="index.html#angebote">Angebote</a>
-    <a href="index.html#raeume">Räume</a>
+    <a href="angebote.html">Angebote</a>
     <a href="sitzungszimmer-rheintal.html">Sitzungszimmer</a>
     <a href="coworking-firmen.html">Für Firmen</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#standort">Standort</a>
+    <a href="standort.html">Standort</a>
+    <a href="ueber-uns.html">Über uns</a>
     <a href="index.html#kontakt">Kontakt</a>
     <span class="langtog" style="margin-top: var(--space-3); align-self: flex-start;" role="group" aria-label="Sprache"><a class="langbtn" href="sitzungszimmer-rheintal.html" hreflang="de-CH" lang="de" aria-current="true">DE</a><a class="langbtn" href="en/meeting-room-rhine-valley.html" hreflang="en" lang="en">EN</a></span>
   </nav>
@@ -153,7 +157,7 @@
     <div class="row"><a class="btn btn-primary" href="https://booking.nowo.space/membership_signup/new?plan_id=c04600eee68add53853d39543d6e47d0" target="_blank" rel="noopener">Sitzungszimmer buchen</a><a class="btn btn-ghost" href="index.html#kontakt">Kontakt</a></div>
   </section>
   <hr class="rule2">
-<section class="section"><div class="split"><div><p class="kicker">Ausstattung</p><h2 class="sec-title">Alles für dein Meeting.</h2><ul class="plan-feats" style="margin-top: var(--leading);"><li>31 m² Fläche</li><li>12 Stühle</li><li>Kamera für Video-Telefonie</li><li>65-Zoll-Bildschirm mit Miracast</li><li>Gratis Kaffee</li></ul></div><figure class="split-figure"><picture><source srcset="assets/img/nowo-sitzungszimmer-widnau.webp" type="image/webp"><img src="assets/img/nowo-sitzungszimmer-widnau.jpg" width="1600" height="901" alt="Sitzungszimmer mit Konferenztisch im Nowo in Widnau" loading="lazy" decoding="async"></picture></figure></div></section>
+<section class="section"><div class="split"><div><p class="kicker">Ausstattung</p><h2 class="sec-title">Alles für dein Meeting.</h2><ul class="plan-feats" style="margin-top: var(--leading);"><li>31 m² Fläche</li><li>12 Stühle</li><li>Kamera für Video-Telefonie</li><li>65-Zoll-Bildschirm mit Miracast</li><li>Gratis Kaffee</li></ul></div><figure class="split-figure"><picture><source srcset="assets/img/nowo-sitzungszimmer-widnau-480.webp 480w, assets/img/nowo-sitzungszimmer-widnau-960.webp 960w, assets/img/nowo-sitzungszimmer-widnau.webp 1600w" sizes="(max-width: 880px) 100vw, 50vw" type="image/webp"><img src="assets/img/nowo-sitzungszimmer-widnau.jpg" width="1600" height="901" alt="Sitzungszimmer mit Konferenztisch im Nowo in Widnau" loading="lazy" decoding="async"></picture></figure></div></section>
   <hr class="rule2" style="margin-top: calc(2 * var(--leading));">
   <section class="section"><p class="kicker">Preise</p><h2 class="sec-title">Stundenweise buchen.</h2><p class="sec-intro">Alle Preise exkl. MwSt.</p><div class="plans meet-prices"><div class="plan"><h3 class="plan-name">Stundenpreis</h3><p class="plan-price"><span class="cur">CHF </span>35</p><p class="plan-unit">pro Stunde</p></div><div class="plan"><h3 class="plan-name">Ab 4 Std.</h3><p class="plan-price"><span class="cur">CHF </span>30</p><p class="plan-unit">pro Stunde</p></div><div class="plan"><h3 class="plan-name">Ab 8 Std.</h3><p class="plan-price"><span class="cur">CHF </span>25</p><p class="plan-unit">pro Stunde</p></div></div>
   <p class="meet-how">Das Sitzungszimmer ist nur für Mitglieder buchbar. Sobald du bei Nowo registriert bist, wählst du im Mitglieder-Portal das Sitzungszimmer aus und buchst die gewünschte Anzahl Stunden.</p>

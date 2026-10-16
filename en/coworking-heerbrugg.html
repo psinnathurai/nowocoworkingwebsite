@@ -23,6 +23,7 @@
 <meta name="twitter:title" content="Coworking near Heerbrugg | Nowo Widnau">
 <meta name="twitter:description" content="Coworking space near Heerbrugg station: 7 to 10 minutes' walk, 21 free parking spaces, 24/7 access. Nowo, Bahnhofstrasse 14, 9443 Widnau.">
 <meta name="twitter:image" content="https://nowo.space/assets/og-image.jpg">
+<link rel="preconnect" href="https://nowocoworkingspace-dkcscqdjdsbnhveu.westeurope-01.azurewebsites.net" crossorigin>
 <link rel="preload" href="../assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" type="image/png" href="../assets/img/nowo-logo.png">
@@ -64,7 +65,10 @@
    ]
   },
   {
-   "@type": "CoworkingSpace",
+   "@type": [
+    "LocalBusiness",
+    "CoworkingSpace"
+   ],
    "@id": "https://nowo.space/#business",
    "name": "Nowo Coworking Space",
    "url": "https://nowo.space/",
@@ -85,16 +89,17 @@
 <script src="../assets/main.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="index.html#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="topbar-in">
+    <a class="nav-brand" href="index.html" aria-label="Nowo home">Nowo</a>
     <span class="avail-badge" id="avail-badge" aria-live="polite"></span>
     <nav class="topnav" aria-label="Main navigation">
-      <a class="nav-link" href="index.html#angebote">Plans</a>
-      <a class="nav-link" href="index.html#raeume">Spaces</a>
+      <a class="nav-link" href="plans.html">Plans</a>
       <a class="nav-link" href="meeting-room-rhine-valley.html">Meeting room</a>
       <a class="nav-link" href="coworking-for-companies.html">For companies</a>
-      <a class="nav-link" href="index.html#standort">Location</a>
+      <a class="nav-link" href="location.html">Location</a>
+      <a class="nav-link" href="about.html">About us</a>
       <a class="nav-link" href="index.html#kontakt">Contact</a>
       <span class="langtog" role="group" aria-label="Language"><a class="langbtn" href="../coworking-heerbrugg.html" hreflang="de-CH" lang="de">DE</a><a class="langbtn" href="coworking-heerbrugg.html" hreflang="en" lang="en" aria-current="true">EN</a></span>
       <a class="btn btn-primary" href="https://booking.nowo.space" target="_blank" rel="noopener">Book a desk</a>
@@ -102,12 +107,11 @@
     </nav>
   </div>
   <nav class="mobile-menu" id="mobile-menu" aria-label="Menu" hidden>
-    <a href="index.html#angebote">Plans</a>
-    <a href="index.html#raeume">Spaces</a>
+    <a href="plans.html">Plans</a>
     <a href="meeting-room-rhine-valley.html">Meeting room</a>
     <a href="coworking-for-companies.html">For companies</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#standort">Location</a>
+    <a href="location.html">Location</a>
+    <a href="about.html">About us</a>
     <a href="index.html#kontakt">Contact</a>
     <span class="langtog" style="margin-top: var(--space-3); align-self: flex-start;" role="group" aria-label="Language"><a class="langbtn" href="../coworking-heerbrugg.html" hreflang="de-CH" lang="de">DE</a><a class="langbtn" href="coworking-heerbrugg.html" hreflang="en" lang="en" aria-current="true">EN</a></span>
   </nav>
@@ -122,7 +126,7 @@
     <div class="row"><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;origin=Bahnhof+Heerbrugg&amp;destination=Bahnhofstrasse+14+9443+Widnau&amp;travelmode=walking" target="_blank" rel="noopener">Route from Heerbrugg station</a><a class="btn btn-ghost" href="https://booking.nowo.space" target="_blank" rel="noopener">Book a desk</a></div>
   </section>
   <hr class="rule2">
-<section class="section"><div class="split"><div><p class="kicker">Getting here</p><h2 class="sec-title">How to get here.</h2><dl class="facts"><dt>From Heerbrugg station</dt><dd>7 to 10 minutes' walk</dd><dt>By car</dt><dd>21 free parking spaces</dd><dt>Address</dt><dd>Bahnhofstrasse 14, 9443 Widnau</dd><dt>Access</dt><dd>24/7 · Access via KleverKey (smartphone)</dd></dl></div><figure class="split-figure"><picture><source srcset="../assets/img/nowo-coworking-widnau-aussenansicht.webp" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-aussenansicht.jpg" width="900" height="1600" alt="Exterior of Nowo at Bahnhofstrasse 14 in Widnau" loading="lazy" decoding="async"></picture></figure></div></section>
+<section class="section"><div class="split"><div><p class="kicker">Getting here</p><h2 class="sec-title">How to get here.</h2><dl class="facts"><dt>From Heerbrugg station</dt><dd>7 to 10 minutes' walk</dd><dt>By car</dt><dd>21 free parking spaces</dd><dt>Address</dt><dd>Bahnhofstrasse 14, 9443 Widnau</dd><dt>Access</dt><dd>24/7 · Access via KleverKey (smartphone)</dd></dl></div><figure class="split-figure"><picture><source srcset="../assets/img/nowo-coworking-widnau-aussenansicht-480.webp 480w, ../assets/img/nowo-coworking-widnau-aussenansicht.webp 900w" sizes="(max-width: 880px) 100vw, 50vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-aussenansicht.jpg" width="900" height="1600" alt="Exterior of Nowo at Bahnhofstrasse 14 in Widnau" loading="lazy" decoding="async"></picture></figure></div></section>
 
 </div>
 </main>

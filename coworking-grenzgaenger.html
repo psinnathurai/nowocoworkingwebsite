@@ -23,6 +23,7 @@
 <meta name="twitter:title" content="Coworking für Grenzgänger im Rheintal | Nowo Widnau">
 <meta name="twitter:description" content="Coworking in Widnau, wenige Minuten von der Grenze zu Österreich: kürzerer Arbeitsweg, Arbeitstage in der Schweiz statt im Homeoffice.">
 <meta name="twitter:image" content="https://nowo.space/assets/og-image.jpg">
+<link rel="preconnect" href="https://nowocoworkingspace-dkcscqdjdsbnhveu.westeurope-01.azurewebsites.net" crossorigin>
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" type="image/png" href="assets/img/nowo-logo.png">
@@ -64,7 +65,10 @@
    ]
   },
   {
-   "@type": "CoworkingSpace",
+   "@type": [
+    "LocalBusiness",
+    "CoworkingSpace"
+   ],
    "@id": "https://nowo.space/#business",
    "name": "Nowo Coworking Space",
    "url": "https://nowo.space/",
@@ -85,16 +89,17 @@
 <script src="assets/main.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="index.html#main">Zum Inhalt springen</a>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
 <header class="topbar">
   <div class="topbar-in">
+    <a class="nav-brand" href="index.html" aria-label="Nowo Startseite">Nowo</a>
     <span class="avail-badge" id="avail-badge" aria-live="polite"></span>
     <nav class="topnav" aria-label="Hauptnavigation">
-      <a class="nav-link" href="index.html#angebote">Angebote</a>
-      <a class="nav-link" href="index.html#raeume">Räume</a>
+      <a class="nav-link" href="angebote.html">Angebote</a>
       <a class="nav-link" href="sitzungszimmer-rheintal.html">Sitzungszimmer</a>
       <a class="nav-link" href="coworking-firmen.html">Für Firmen</a>
-      <a class="nav-link" href="index.html#standort">Standort</a>
+      <a class="nav-link" href="standort.html">Standort</a>
+      <a class="nav-link" href="ueber-uns.html">Über uns</a>
       <a class="nav-link" href="index.html#kontakt">Kontakt</a>
       <span class="langtog" role="group" aria-label="Sprache"><a class="langbtn" href="coworking-grenzgaenger.html" hreflang="de-CH" lang="de" aria-current="true">DE</a><a class="langbtn" href="en/coworking-cross-border-commuters.html" hreflang="en" lang="en">EN</a></span>
       <a class="btn btn-primary" href="https://booking.nowo.space" target="_blank" rel="noopener">Platz buchen</a>
@@ -102,12 +107,11 @@
     </nav>
   </div>
   <nav class="mobile-menu" id="mobile-menu" aria-label="Menü" hidden>
-    <a href="index.html#angebote">Angebote</a>
-    <a href="index.html#raeume">Räume</a>
+    <a href="angebote.html">Angebote</a>
     <a href="sitzungszimmer-rheintal.html">Sitzungszimmer</a>
     <a href="coworking-firmen.html">Für Firmen</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#standort">Standort</a>
+    <a href="standort.html">Standort</a>
+    <a href="ueber-uns.html">Über uns</a>
     <a href="index.html#kontakt">Kontakt</a>
     <span class="langtog" style="margin-top: var(--space-3); align-self: flex-start;" role="group" aria-label="Sprache"><a class="langbtn" href="coworking-grenzgaenger.html" hreflang="de-CH" lang="de" aria-current="true">DE</a><a class="langbtn" href="en/coworking-cross-border-commuters.html" hreflang="en" lang="en">EN</a></span>
   </nav>
@@ -119,13 +123,13 @@
     <p class="kicker">Near Office statt Home Office</p>
     <h1>Coworking für Grenzgänger.</h1>
     <p class="sec-intro">Nowo liegt in Widnau, nur wenige Minuten von der Grenze nach Österreich. Du sparst dir den langen Arbeitsweg und arbeitest trotzdem in der Schweiz.</p>
-    <div class="row"><a class="btn btn-primary" href="index.html#angebote">Angebote ansehen</a><a class="btn btn-ghost" href="index.html#kontakt">Kontakt</a></div>
+    <div class="row"><a class="btn btn-primary" href="angebote.html">Angebote ansehen</a><a class="btn btn-ghost" href="index.html#kontakt">Kontakt</a></div>
   </section>
   <hr class="rule2">
 <section class="section"><div class="split"><div><p class="kicker">Die 50-%-Regel</p><h2 class="sec-title">Homeoffice-Grenze einhalten.</h2><p class="sec-intro">Für Grenzgänger, die bei einem Schweizer Arbeitgeber angestellt sind und in Österreich wohnen, gilt seit dem 1. Juli 2023 ein multilaterales Rahmenübereinkommen zur Telearbeit. Bleibt die Telearbeit im Wohnstaat unter 50 % der Gesamtarbeitszeit (max. 49,9 %), bleibst du in der Schweiz sozialversichert. Arbeitest du 50 % oder mehr im Homeoffice in Österreich, hat das gravierende sozialversicherungsrechtliche Nachteile.</p>
    <p class="sec-intro">Arbeitstage im Nowo in Widnau leistest du physisch in der Schweiz. Sie zählen nicht als Homeoffice im Wohnstaat.</p>
    <p class="src-note" style="margin-top: var(--leading);"><a href="https://www.bsv.admin.ch/de/telearbeit" target="_blank" rel="noopener" hreflang="de">Quelle: Bundesamt für Sozialversicherungen (BSV), Telearbeit →</a></p>
-   <p class="src-note">Diese Angaben sind keine Rechts- oder Steuerberatung. Kläre deine Situation mit deinem Arbeitgeber oder deiner Ausgleichskasse, auch ob du im Coworking arbeiten darfst. Steuerliche Regeln für Grenzgänger sind separat geregelt.</p></div><figure class="split-figure"><picture><source srcset="assets/img/nowo-coworking-widnau-fokus-arbeitsplatz.webp" type="image/webp"><img src="assets/img/nowo-coworking-widnau-fokus-arbeitsplatz.jpg" width="1600" height="900" alt="Ruhiger Arbeitsplatz im Nowo in Widnau" loading="lazy" decoding="async"></picture></figure></div></section>
+   <p class="src-note">Diese Angaben sind keine Rechts- oder Steuerberatung. Kläre deine Situation mit deinem Arbeitgeber oder deiner Ausgleichskasse, auch ob du im Coworking arbeiten darfst. Steuerliche Regeln für Grenzgänger sind separat geregelt.</p></div><figure class="split-figure"><picture><source srcset="assets/img/nowo-coworking-widnau-fokus-arbeitsplatz-480.webp 480w, assets/img/nowo-coworking-widnau-fokus-arbeitsplatz-960.webp 960w, assets/img/nowo-coworking-widnau-fokus-arbeitsplatz.webp 1600w" sizes="(max-width: 880px) 100vw, 50vw" type="image/webp"><img src="assets/img/nowo-coworking-widnau-fokus-arbeitsplatz.jpg" width="1600" height="900" alt="Ruhiger Arbeitsplatz im Nowo in Widnau" loading="lazy" decoding="async"></picture></figure></div></section>
 
 </div>
 </main>

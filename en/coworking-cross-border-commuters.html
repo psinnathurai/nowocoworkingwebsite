@@ -23,6 +23,7 @@
 <meta name="twitter:title" content="Coworking for cross-border commuters | Nowo Widnau">
 <meta name="twitter:description" content="Coworking in Widnau, minutes from the Austrian border: a shorter commute and working days in Switzerland instead of home office. 21 free parking spaces.">
 <meta name="twitter:image" content="https://nowo.space/assets/og-image.jpg">
+<link rel="preconnect" href="https://nowocoworkingspace-dkcscqdjdsbnhveu.westeurope-01.azurewebsites.net" crossorigin>
 <link rel="preload" href="../assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" type="image/png" href="../assets/img/nowo-logo.png">
@@ -64,7 +65,10 @@
    ]
   },
   {
-   "@type": "CoworkingSpace",
+   "@type": [
+    "LocalBusiness",
+    "CoworkingSpace"
+   ],
    "@id": "https://nowo.space/#business",
    "name": "Nowo Coworking Space",
    "url": "https://nowo.space/",
@@ -85,16 +89,17 @@
 <script src="../assets/main.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="index.html#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="topbar-in">
+    <a class="nav-brand" href="index.html" aria-label="Nowo home">Nowo</a>
     <span class="avail-badge" id="avail-badge" aria-live="polite"></span>
     <nav class="topnav" aria-label="Main navigation">
-      <a class="nav-link" href="index.html#angebote">Plans</a>
-      <a class="nav-link" href="index.html#raeume">Spaces</a>
+      <a class="nav-link" href="plans.html">Plans</a>
       <a class="nav-link" href="meeting-room-rhine-valley.html">Meeting room</a>
       <a class="nav-link" href="coworking-for-companies.html">For companies</a>
-      <a class="nav-link" href="index.html#standort">Location</a>
+      <a class="nav-link" href="location.html">Location</a>
+      <a class="nav-link" href="about.html">About us</a>
       <a class="nav-link" href="index.html#kontakt">Contact</a>
       <span class="langtog" role="group" aria-label="Language"><a class="langbtn" href="../coworking-grenzgaenger.html" hreflang="de-CH" lang="de">DE</a><a class="langbtn" href="coworking-cross-border-commuters.html" hreflang="en" lang="en" aria-current="true">EN</a></span>
       <a class="btn btn-primary" href="https://booking.nowo.space" target="_blank" rel="noopener">Book a desk</a>
@@ -102,12 +107,11 @@
     </nav>
   </div>
   <nav class="mobile-menu" id="mobile-menu" aria-label="Menu" hidden>
-    <a href="index.html#angebote">Plans</a>
-    <a href="index.html#raeume">Spaces</a>
+    <a href="plans.html">Plans</a>
     <a href="meeting-room-rhine-valley.html">Meeting room</a>
     <a href="coworking-for-companies.html">For companies</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="index.html#standort">Location</a>
+    <a href="location.html">Location</a>
+    <a href="about.html">About us</a>
     <a href="index.html#kontakt">Contact</a>
     <span class="langtog" style="margin-top: var(--space-3); align-self: flex-start;" role="group" aria-label="Language"><a class="langbtn" href="../coworking-grenzgaenger.html" hreflang="de-CH" lang="de">DE</a><a class="langbtn" href="coworking-cross-border-commuters.html" hreflang="en" lang="en" aria-current="true">EN</a></span>
   </nav>
@@ -119,13 +123,13 @@
     <p class="kicker">Near office, not home office</p>
     <h1>Coworking for cross-border commuters.</h1>
     <p class="sec-intro">Nowo is in Widnau, only a few minutes from the Austrian border. You skip the long commute and still work in Switzerland.</p>
-    <div class="row"><a class="btn btn-primary" href="index.html#angebote">See plans</a><a class="btn btn-ghost" href="index.html#kontakt">Contact</a></div>
+    <div class="row"><a class="btn btn-primary" href="plans.html">See plans</a><a class="btn btn-ghost" href="index.html#kontakt">Contact</a></div>
   </section>
   <hr class="rule2">
 <section class="section"><div class="split"><div><p class="kicker">The 50 % rule</p><h2 class="sec-title">Stay within the home-office limit.</h2><p class="sec-intro">For cross-border commuters employed by a Swiss employer and living in Austria, a multilateral framework agreement on telework has applied since 1 July 2023. If telework in your country of residence stays below 50 % of your total working time (max. 49.9 %), you remain insured in Switzerland. Working 50 % or more from home in Austria has serious social security consequences.</p>
    <p class="sec-intro">Working days at Nowo in Widnau are spent physically in Switzerland. They do not count as home office in your country of residence.</p>
    <p class="src-note" style="margin-top: var(--leading);"><a href="https://www.bsv.admin.ch/de/telearbeit" target="_blank" rel="noopener" hreflang="de">Source: Swiss Federal Social Insurance Office (FSIO/BSV), telework (in German) →</a></p>
-   <p class="src-note">This is not legal or tax advice. Check your situation with your employer or your compensation fund, including whether you may work from a coworking space. Tax rules for cross-border commuters are governed separately.</p></div><figure class="split-figure"><picture><source srcset="../assets/img/nowo-coworking-widnau-fokus-arbeitsplatz.webp" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-fokus-arbeitsplatz.jpg" width="1600" height="900" alt="Quiet workspace at Nowo in Widnau" loading="lazy" decoding="async"></picture></figure></div></section>
+   <p class="src-note">This is not legal or tax advice. Check your situation with your employer or your compensation fund, including whether you may work from a coworking space. Tax rules for cross-border commuters are governed separately.</p></div><figure class="split-figure"><picture><source srcset="../assets/img/nowo-coworking-widnau-fokus-arbeitsplatz-480.webp 480w, ../assets/img/nowo-coworking-widnau-fokus-arbeitsplatz-960.webp 960w, ../assets/img/nowo-coworking-widnau-fokus-arbeitsplatz.webp 1600w" sizes="(max-width: 880px) 100vw, 50vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-fokus-arbeitsplatz.jpg" width="1600" height="900" alt="Quiet workspace at Nowo in Widnau" loading="lazy" decoding="async"></picture></figure></div></section>
 
 </div>
 </main>

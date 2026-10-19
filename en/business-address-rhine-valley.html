@@ -102,12 +102,25 @@
 </script>
 <script>document.documentElement.classList.add("js")</script>
 <script src="../assets/main.js" defer></script>
+<!-- Google tag (gtag.js), lädt erst nach Einwilligung -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.nowoLoadGA = function () {
+    if (window.nowoGA) return; window.nowoGA = true;
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-9KGDD8R7G4';
+    document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', 'G-9KGDD8R7G4');
+  };
+  try { if (localStorage.getItem('nowo-consent') === 'granted') window.nowoLoadGA(); } catch (e) {}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="topbar-in">
-    <a class="nav-brand" href="index.html" aria-label="Nowo home">Nowo</a>
+    <a class="nav-brand" href="index.html" aria-label="Nowo home"><img src="../assets/img/nowo-wordmark.png" width="422" height="139" alt="Nowo Coworking Space"></a>
     <span class="avail-badge" id="avail-badge" aria-live="polite"></span>
     <nav class="topnav" aria-label="Main navigation">
       <a class="nav-link" href="plans.html">Plans</a>
@@ -146,22 +159,19 @@
 </div>
 </main>
 
-<div class="wrap">
-  <footer class="site-footer">
-    <address>
-      <strong>Nowo Coworking Space GmbH</strong><br>
-      Bahnhofstrasse 14, 9443 Widnau<br>
-      <a href="tel:+41798189171">079 818 91 71</a> · <a href="mailto:hello@nowo.space">hello@nowo.space</a>
-    </address>
-    <ul class="foot-links">
-      <li><a href="https://booking.nowo.space" target="_blank" rel="noopener">booking.nowo.space</a></li>
-      <li><a href="https://instagram.com/nowocoworkingspace" target="_blank" rel="noopener">Instagram</a></li>
-      <li><a href="https://www.linkedin.com/company/106627344" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="../impressum.html" hreflang="de-CH">Legal notice (DE)</a></li>
-      <li><a href="../datenschutz.html" hreflang="de-CH">Privacy policy (DE)</a></li>
-    </ul>
-    <span style="flex-basis: 100%;">© 2026 Nowo · Coworking Space Widnau</span>
-  </footer>
-</div>
+<footer class="site-footer2">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" aria-label="Nowo home"><img src="../assets/img/nowo-wordmark.png" width="422" height="139" alt="Nowo Coworking Space"></a>
+        <address><strong>Nowo Coworking Space GmbH</strong><br>Bahnhofstrasse 14<br>9443 Widnau, Switzerland</address>
+      </div>
+      <div><h2>Plans</h2><ul><li><a href="plans.html">Plans & prices</a></li><li><a href="meeting-room-rhine-valley.html">Meeting room</a></li><li><a href="business-address-rhine-valley.html">Business address</a></li><li><a href="coworking-for-companies.html">For companies</a></li></ul></div>
+      <div><h2>Nowo</h2><ul><li><a href="location.html">Location</a></li><li><a href="about.html">About us</a></li><li><a href="coworking-cross-border-commuters.html">Cross-border commuters</a></li><li><a href="coworking-heerbrugg.html">From Heerbrugg</a></li></ul></div>
+      <div><h2>Contact</h2><ul><li><a href="tel:+41798189171">079 818 91 71</a></li><li><a href="mailto:hello@nowo.space">hello@nowo.space</a></li><li><a href="https://booking.nowo.space" target="_blank" rel="noopener">Booking portal</a></li><li><a href="https://instagram.com/nowocoworkingspace" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/106627344" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>© 2026 Nowo Coworking Space GmbH</span><span class="row" style="gap: 8px 20px;"><a href="../impressum.html">Legal notice</a><a href="../datenschutz.html">Privacy policy</a><button type="button" class="btn-link" data-consent-open style="color: inherit; font-size: inherit;">Cookie settings</button></span></div>
+  </div>
+</footer>
 </body>
 </html>

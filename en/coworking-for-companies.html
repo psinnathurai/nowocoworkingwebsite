@@ -99,17 +99,30 @@
 </script>
 <script>document.documentElement.classList.add("js")</script>
 <script src="../assets/main.js" defer></script>
+<!-- Google tag (gtag.js), lädt erst nach Einwilligung -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.nowoLoadGA = function () {
+    if (window.nowoGA) return; window.nowoGA = true;
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-9KGDD8R7G4';
+    document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', 'G-9KGDD8R7G4');
+  };
+  try { if (localStorage.getItem('nowo-consent') === 'granted') window.nowoLoadGA(); } catch (e) {}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="topbar-in">
-    <a class="nav-brand" href="index.html" aria-label="Nowo home">Nowo</a>
+    <a class="nav-brand" href="index.html" aria-label="Nowo home"><img src="../assets/img/nowo-wordmark.png" width="422" height="139" alt="Nowo Coworking Space"></a>
     <span class="avail-badge" id="avail-badge" aria-live="polite"></span>
     <nav class="topnav" aria-label="Main navigation">
       <a class="nav-link" href="plans.html">Plans</a>
       <a class="nav-link" href="meeting-room-rhine-valley.html">Meeting room</a>
-      <a class="nav-link" href="coworking-for-companies.html">For companies</a>
+      <a class="nav-link" href="coworking-for-companies.html" aria-current="page">For companies</a>
       <a class="nav-link" href="location.html">Location</a>
       <a class="nav-link" href="about.html">About us</a>
       <a class="nav-link" href="index.html#kontakt">Contact</a>
@@ -135,32 +148,45 @@
     <p class="kicker">Near office, not home office</p>
     <h1>Coworking for companies.</h1>
     <p class="sec-intro">Let your employees work close to home, at a proper workspace instead of a home office. We put the package together to fit your needs.</p>
-    <div class="row"><a class="btn btn-primary" href="mailto:hello@nowo.space?subject=Team%20package">Request an offer</a><a class="btn btn-ghost" href="index.html#kontakt">Contact</a></div>
+    <div class="row"><a class="btn btn-primary" href="#anfrage">Request an offer →</a><a class="btn btn-ghost" href="index.html#kontakt">Contact</a></div>
   </section>
   <hr class="rule2">
 <section class="section"><div class="split"><div><p class="kicker">Building blocks</p><h2 class="sec-title">Put together to fit your needs.</h2><ul class="plan-feats" style="margin-top: var(--leading);"><li>Flexible desks for rotating employees</li><li>Fixed desks for permanent team members</li><li>Business address in the Rhine Valley</li><li>Meeting room for team meetings and client appointments</li><li>24/7 access via KleverKey (smartphone)</li><li>27-inch monitor included</li></ul>
    <p class="sec-intro"><strong>Price on request.</strong> Tell us how many people should work in the space and how often, and we will send you an offer.</p>
    <p class="sec-intro">Employees from Austria? <a href="coworking-cross-border-commuters.html">Coworking for cross-border commuters →</a></p></div><figure class="split-figure"><picture><source srcset="../assets/img/nowo-coworking-widnau-arbeitsplaetze-480.webp 480w, ../assets/img/nowo-coworking-widnau-arbeitsplaetze-960.webp 960w, ../assets/img/nowo-coworking-widnau-arbeitsplaetze.webp 1600w" sizes="(max-width: 880px) 100vw, 50vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-arbeitsplaetze.jpg" width="1600" height="900" alt="Open coworking area with desks at Nowo in Widnau" loading="lazy" decoding="async"></picture></figure></div></section>
 
+<hr class="rule2">
+<section class="section" id="anfrage" aria-label="Request a company offer.">
+  <div class="contact">
+    <div class="sec-head"><p class="kicker">Request</p><h2 class="sec-title">Request a company offer.</h2><p class="sec-intro">Tell us briefly what you need and we will send you an offer. Fields without "optional" are required.</p></div>
+    <form class="form" id="b2b-form" action="mailto:hello@nowo.space" method="post" enctype="text/plain">
+      <div class="field"><label for="b-name">Name</label><input class="input" id="b-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="b-company">Company</label><input class="input" id="b-company" name="company" type="text" autocomplete="organization" required></div>
+      <div class="field"><label for="b-email">Email</label><input class="input" id="b-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="b-phone">Phone <span class="opt">(optional)</span></label><input class="input" id="b-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="field full"><label for="b-people">Number of people</label><select class="input" id="b-people" name="people"><option>1</option><option>2–3</option><option>4–6</option><option>more than 6</option></select></div>
+      <div class="field full"><label for="b-need">What do you need? <span class="opt">(optional)</span></label><textarea class="input" id="b-need" name="need" rows="4" placeholder="e.g. 3 people, 2 days a week each, from March"></textarea></div>
+      <div class="full row"><button type="submit" class="btn btn-primary">Send request →</button><p class="form-note">Sending opens your email app.</p></div>
+    </form>
+  </div>
+</section>
+
 </div>
 </main>
 
-<div class="wrap">
-  <footer class="site-footer">
-    <address>
-      <strong>Nowo Coworking Space GmbH</strong><br>
-      Bahnhofstrasse 14, 9443 Widnau<br>
-      <a href="tel:+41798189171">079 818 91 71</a> · <a href="mailto:hello@nowo.space">hello@nowo.space</a>
-    </address>
-    <ul class="foot-links">
-      <li><a href="https://booking.nowo.space" target="_blank" rel="noopener">booking.nowo.space</a></li>
-      <li><a href="https://instagram.com/nowocoworkingspace" target="_blank" rel="noopener">Instagram</a></li>
-      <li><a href="https://www.linkedin.com/company/106627344" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="../impressum.html" hreflang="de-CH">Legal notice (DE)</a></li>
-      <li><a href="../datenschutz.html" hreflang="de-CH">Privacy policy (DE)</a></li>
-    </ul>
-    <span style="flex-basis: 100%;">© 2026 Nowo · Coworking Space Widnau</span>
-  </footer>
-</div>
+<footer class="site-footer2">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" aria-label="Nowo home"><img src="../assets/img/nowo-wordmark.png" width="422" height="139" alt="Nowo Coworking Space"></a>
+        <address><strong>Nowo Coworking Space GmbH</strong><br>Bahnhofstrasse 14<br>9443 Widnau, Switzerland</address>
+      </div>
+      <div><h2>Plans</h2><ul><li><a href="plans.html">Plans & prices</a></li><li><a href="meeting-room-rhine-valley.html">Meeting room</a></li><li><a href="business-address-rhine-valley.html">Business address</a></li><li><a href="coworking-for-companies.html">For companies</a></li></ul></div>
+      <div><h2>Nowo</h2><ul><li><a href="location.html">Location</a></li><li><a href="about.html">About us</a></li><li><a href="coworking-cross-border-commuters.html">Cross-border commuters</a></li><li><a href="coworking-heerbrugg.html">From Heerbrugg</a></li></ul></div>
+      <div><h2>Contact</h2><ul><li><a href="tel:+41798189171">079 818 91 71</a></li><li><a href="mailto:hello@nowo.space">hello@nowo.space</a></li><li><a href="https://booking.nowo.space" target="_blank" rel="noopener">Booking portal</a></li><li><a href="https://instagram.com/nowocoworkingspace" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/106627344" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>© 2026 Nowo Coworking Space GmbH</span><span class="row" style="gap: 8px 20px;"><a href="../impressum.html">Legal notice</a><a href="../datenschutz.html">Privacy policy</a><button type="button" class="btn-link" data-consent-open style="color: inherit; font-size: inherit;">Cookie settings</button></span></div>
+  </div>
+</footer>
 </body>
 </html>

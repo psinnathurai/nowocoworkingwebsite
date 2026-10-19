@@ -377,12 +377,25 @@
  }
 }
 </script>
+<!-- Google tag (gtag.js), lädt erst nach Einwilligung -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.nowoLoadGA = function () {
+    if (window.nowoGA) return; window.nowoGA = true;
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-9KGDD8R7G4';
+    document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', 'G-9KGDD8R7G4');
+  };
+  try { if (localStorage.getItem('nowo-consent') === 'granted') window.nowoLoadGA(); } catch (e) {}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="topbar-in">
-    <a class="nav-brand" href="./" aria-label="Nowo home">Nowo</a>
+    <a class="nav-brand" href="./" aria-label="Nowo home"><img src="../assets/img/nowo-wordmark.png" width="422" height="139" alt="Nowo Coworking Space"></a>
     <span class="avail-badge" id="avail-badge" aria-live="polite"></span>
     <nav class="topnav" aria-label="Main navigation">
       <a class="nav-link" href="plans.html">Plans</a>
@@ -409,21 +422,24 @@
 
 <main id="main">
 <div class="wrap">
-  <section class="hero" aria-label="Introduction">
-    <p class="kicker hero-tagline"><span class="tag-word">Your Space</span><span class="tag-word">Your Flow</span><span class="tag-word">Your Nowo.</span></p>
-    <h1 class="display"><span class="line">Work in Widnau.</span> <span class="line em">Around the clock.</span></h1>
-    <p class="sub">Nowo is a coworking space right in Widnau in the St. Gallen Rhine Valley: 16 desks across 249 m², 24/7 access via app, day passes from CHF 35 and a meeting room, at Bahnhofstrasse 14.</p>
-    <div class="row">
-      <a class="btn btn-primary" href="https://booking.nowo.space" target="_blank" rel="noopener">Book a desk</a>
-      <a class="btn btn-ghost" href="#kontakt">Get in touch</a>
+  <section class="hero2" aria-label="Introduction">
+    <div class="hero2-text">
+      <p class="kicker">Coworking in Widnau · St. Gallen Rhine Valley</p>
+      <h1 class="display"><span class="line">Your workspace in the Rhine Valley.</span> <span class="line em">Not on the motorway.</span></h1>
+      <p class="sub">Nowo is a coworking space at Bahnhofstrasse 14 in Widnau. Quiet desks with a 27-inch monitor, fast internet and coffee, from CHF 20 for half a day.</p>
+      <div class="row">
+        <a class="btn btn-primary" href="https://booking.nowo.space" target="_blank" rel="noopener">Book a desk →</a>
+        <a class="btn btn-secondary" href="plans.html">See plans</a>
+      </div>
     </div>
-    <div class="hero-strip">
-      <picture><source srcset="../assets/img/nowo-coworking-widnau-arbeitsplaetze-480.webp 480w, ../assets/img/nowo-coworking-widnau-arbeitsplaetze-960.webp 960w, ../assets/img/nowo-coworking-widnau-arbeitsplaetze.webp 1600w" sizes="(max-width: 720px) 50vw, 25vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-arbeitsplaetze.jpg" width="1600" height="900" alt="Open coworking area with desks at Nowo in Widnau" fetchpriority="high" decoding="async"></picture>
-      <picture><source srcset="../assets/img/nowo-coworking-widnau-lounge-480.webp 480w, ../assets/img/nowo-coworking-widnau-lounge-960.webp 960w, ../assets/img/nowo-coworking-widnau-lounge.webp 1600w" sizes="(max-width: 720px) 50vw, 25vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-lounge.jpg" width="1600" height="900" alt="Lounge seating at Nowo Coworking Space Widnau" decoding="async"></picture>
-      <picture><source srcset="../assets/img/nowo-coworking-widnau-fokus-arbeitsplatz-480.webp 480w, ../assets/img/nowo-coworking-widnau-fokus-arbeitsplatz-960.webp 960w, ../assets/img/nowo-coworking-widnau-fokus-arbeitsplatz.webp 1600w" sizes="(max-width: 720px) 50vw, 25vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-fokus-arbeitsplatz.jpg" width="1600" height="900" alt="Quiet desk for focused work at Nowo in Widnau" loading="lazy" decoding="async"></picture>
-      <picture><source srcset="../assets/img/nowo-coworking-widnau-aussenansicht-480.webp 480w, ../assets/img/nowo-coworking-widnau-aussenansicht.webp 900w" sizes="(max-width: 720px) 50vw, 25vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-aussenansicht.jpg" width="900" height="1600" alt="Exterior of Nowo Coworking Space on Bahnhofstrasse in Widnau" loading="lazy" decoding="async"></picture>
-    </div>
+    <figure class="hero2-figure"><picture><source srcset="../assets/img/nowo-coworking-widnau-flex-desks-480.webp 480w, ../assets/img/nowo-coworking-widnau-flex-desks-960.webp 960w, ../assets/img/nowo-coworking-widnau-flex-desks.webp 1600w" sizes="(max-width: 900px) 100vw, 45vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-flex-desks.jpg" width="1600" height="900" alt="Flex desks with monitors and height-adjustable tables at Nowo Coworking Space Widnau" fetchpriority="high" decoding="async"></picture></figure>
   </section>
+  <ul class="facts-strip">
+    <li><strong>16</strong><span>desks across 249 m²</span></li>
+    <li><strong>24/7</strong><span>access via KleverKey (smartphone)</span></li>
+    <li><strong>7–10 min</strong><span>walk from Heerbrugg station</span></li>
+    <li><strong>21</strong><span>free parking spaces</span></li>
+  </ul>
 </div>
 
 <div class="wrap">
@@ -432,71 +448,62 @@
       <p class="kicker">Why Nowo</p>
       <h2 class="sec-title">A workspace that fits around you.</h2>
     </div>
-    <div class="feature">
-      <p class="f-num" aria-hidden="true">01</p>
-      <h3 class="f-title">24/7 access</h3>
-      <p class="f-copy">The KleverKey app unlocks the door straight from your phone, around the clock, from the moment you become a member. No key, no badge needed.</p>
-    </div>
-    <div class="feature">
-      <p class="f-num" aria-hidden="true">02</p>
-      <h3 class="f-title">Book instantly</h3>
-      <p class="f-copy">Reserve your desk in seconds on our own platform, booking.nowo.space. No calls, no waiting.</p>
-    </div>
-    <div class="feature">
-      <p class="f-num" aria-hidden="true">03</p>
-      <h3 class="f-title">Essentials included</h3>
-      <p class="f-copy">Fast internet, a 27-inch monitor and coffee are all in. Book the meeting room by the hour when you need it.</p>
-    </div>
-    <div class="feature">
-      <p class="f-num" aria-hidden="true">04</p>
-      <h3 class="f-title">Domicile address</h3>
-      <p class="f-copy">Our virtual office gives you a professional business address in the heart of the Rhine Valley. We receive your mail, ideal for founders and companies without a location of their own.</p>
+    <div class="benefits">
+      <div class="benefit"><h3>24/7 access</h3><p>The KleverKey app opens the door from your phone, around the clock, once you are a member.</p></div>
+      <div class="benefit"><h3>Book instantly</h3><p>Reserve your desk in seconds on booking.nowo.space. No calls, no waiting.</p></div>
+      <div class="benefit"><h3>Essentials included</h3><p>Fast internet, a 27-inch monitor and coffee are all in. Book the meeting room by the hour when you need it.</p></div>
+      <div class="benefit"><h3>Domicile address</h3><p>The virtual office gives your company a business address in Widnau. We receive your mail.</p></div>
     </div>
   </section>
 </div>
 
-<hr class="rule2">
-
+<div class="band-green">
 <div class="wrap">
-  <section class="section" id="near-office" aria-label="Near office, not home office">
+  <section class="section" id="firmen" aria-label="Near office, not home office">
     <div class="sec-head">
       <p class="kicker">Near office, not home office</p>
-      <h2 class="sec-title">Work close to home.</h2>
-      <p class="sec-intro">A proper workspace in the region, without the long commute. Nowo has offers for companies and for cross-border commuters.</p>
+      <h2 class="sec-title">For companies and teams in the Rhine Valley.</h2>
+      <p class="sec-intro">Your employees work close to home, at a proper workspace instead of a home office.</p>
     </div>
-    <div class="dual">
-      <div class="dual-cell">
-        <h3 class="f-title">For companies</h3>
-        <p class="f-copy">Let your employees in the Rhine Valley work close to home. We put together a team package to fit your needs.</p>
-        <a class="btn btn-secondary" href="coworking-for-companies.html">Coworking for companies →</a>
+    <div class="b2b">
+      <div class="b2b-main">
+        <h3>Desks for your team</h3>
+        <p>We put the package together to fit your needs, for individual employees or a whole team.</p>
+        <ul class="checks"><li>Flex desks and fixed desks</li><li>Business address in Widnau</li><li>Meeting room for meetings</li><li>Price on request</li></ul>
+        <a class="btn btn-primary" href="coworking-for-companies.html#anfrage">Request a company offer →</a>
       </div>
-      <div class="dual-cell">
-        <h3 class="f-title">For cross-border commuters</h3>
-        <p class="f-copy">Minutes from the Austrian border. A shorter commute, and your working days at Nowo are spent physically in Switzerland.</p>
-        <a class="btn btn-secondary" href="coworking-cross-border-commuters.html">Coworking for cross-border commuters →</a>
+      <div class="b2b-side">
+        <h3>For cross-border commuters</h3>
+        <p>Minutes from the Austrian border. Your working days at Nowo are spent physically in Switzerland.</p>
+        <a class="btn btn-secondary" href="coworking-cross-border-commuters.html">More for commuters →</a>
       </div>
     </div>
   </section>
 </div>
-
-<hr class="rule2">
+</div>
 
 <div class="wrap">
   <section class="section" id="raeume" aria-label="Spaces & amenities">
-    <div class="split">
-      <div>
+    <div class="rooms-head">
+      <div class="sec-head">
         <p class="kicker">Spaces & amenities</p>
-        <h2 class="sec-title">Everything you need to just start.</h2>
-        <p class="sec-intro">Fast internet, ergonomic desks, a meeting room and genuinely good coffee, across 249 m² right in Widnau.</p>
-        <p style="margin-top: var(--leading);"><a class="btn btn-secondary" href="https://tourmkr.com/F1jUOFs892" target="_blank" rel="noopener">Take the 360° tour →</a></p>
-        <p style="margin-top: var(--half);"><a href="https://youtu.be/xHedouSn_n8" target="_blank" rel="noopener">Watch the video →</a></p>
+        <h2 class="sec-title">249 m² to work, call and meet.</h2>
+        <p class="sec-intro">Open desks, a lounge, a kitchen and a meeting room, right in Widnau.</p>
       </div>
-      <figure class="split-figure"><picture><source srcset="../assets/img/nowo-coworking-widnau-hauptraum-480.webp 480w, ../assets/img/nowo-coworking-widnau-hauptraum-960.webp 960w, ../assets/img/nowo-coworking-widnau-hauptraum.webp 1600w" sizes="(max-width: 880px) 100vw, 50vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-hauptraum.jpg" width="1600" height="900" alt="Main room with desks at Nowo Coworking Space Widnau" loading="lazy" decoding="async"></picture></figure>
+      <div class="row">
+        <a class="btn btn-secondary" href="https://tourmkr.com/F1jUOFs892" target="_blank" rel="noopener">Take the 360° tour →</a>
+        <a class="btn btn-ghost" href="https://youtu.be/xHedouSn_n8" target="_blank" rel="noopener">Watch the video</a>
+      </div>
+    </div>
+    <div class="mosaic">
+      <picture><source srcset="../assets/img/nowo-coworking-widnau-hauptraum-480.webp 480w, ../assets/img/nowo-coworking-widnau-hauptraum-960.webp 960w, ../assets/img/nowo-coworking-widnau-hauptraum.webp 1600w" sizes="(max-width: 760px) 100vw, 66vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-hauptraum.jpg" width="1600" height="900" alt="Main room with desks at Nowo Coworking Space Widnau" loading="lazy" decoding="async"></picture>
+      <picture><source srcset="../assets/img/nowo-coworking-widnau-lounge-480.webp 480w, ../assets/img/nowo-coworking-widnau-lounge-960.webp 960w, ../assets/img/nowo-coworking-widnau-lounge.webp 1600w" sizes="(max-width: 760px) 50vw, 33vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-lounge.jpg" width="1600" height="900" alt="Lounge seating at Nowo Coworking Space Widnau" loading="lazy" decoding="async"></picture>
+      <picture><source srcset="../assets/img/nowo-coworking-widnau-kueche-480.webp 480w, ../assets/img/nowo-coworking-widnau-kueche-960.webp 960w, ../assets/img/nowo-coworking-widnau-kueche.webp 1600w" sizes="(max-width: 760px) 50vw, 33vw" type="image/webp"><img src="../assets/img/nowo-coworking-widnau-kueche.jpg" width="1600" height="900" alt="Kitchen at Nowo Coworking Space Widnau" loading="lazy" decoding="async"></picture>
     </div>
   </section>
 </div>
 
-<div class="band-clay">
+<div class="band-paper">
 <div class="wrap">
   <section class="section" id="bewertungen" aria-label="Google reviews">
     <div class="sec-head">
@@ -528,53 +535,69 @@
 </div>
 </div>
 
-<hr class="rule2">
+<div class="band-dark">
+<div class="wrap">
+  <section class="close2" aria-label="Try it for a day.">
+    <div>
+      <h2>Try it for a day.</h2>
+      <p>A day pass costs CHF 35, half a day CHF 20. Book, open the door with your phone, get started.</p>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary btn-block" href="https://booking.nowo.space/membership_signup/new?plan_id=afc04445b967bf7d4a6469eb07ed310d" target="_blank" rel="noopener">Book a day pass →</a>
+      <a class="btn btn-secondary btn-block" href="plans.html">All plans</a>
+    </div>
+  </section>
+</div>
+</div>
 
 <div class="wrap">
   <section class="section" id="kontakt" aria-label="Contact">
-    <div class="sec-head">
-      <p class="kicker">Contact</p>
-      <h2 class="sec-title">Write to us.</h2>
-      <p class="sec-intro">Questions about memberships, a tour or a team office? We'll get back to you quickly.</p>
+    <div class="contact">
+      <div>
+        <div class="sec-head">
+          <p class="kicker">Contact</p>
+          <h2 class="sec-title">Write to us.</h2>
+          <p class="sec-intro">Questions about memberships, a visit or a team package? We will get back to you quickly.</p>
+        </div>
+        <dl class="contact-info"><div><dt>Address</dt><dd>Bahnhofstrasse 14, 9443 Widnau</dd></div><div><dt>Phone</dt><dd><a href="tel:+41798189171">+41 79 818 91 71</a></dd></div><div><dt>Email</dt><dd><a href="mailto:hello@nowo.space">hello@nowo.space</a></dd></div></dl>
+      </div>
+      <form class="form" id="contact-form" action="mailto:hello@nowo.space" method="post" enctype="text/plain">
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input class="input" id="cf-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input class="input" id="cf-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+        <div class="field full">
+          <label for="cf-msg">Message</label>
+          <textarea class="input" id="cf-msg" name="message" rows="6" placeholder="How can we help?"></textarea>
+        </div>
+        <div class="full row">
+          <button type="submit" class="btn btn-primary">Send message →</button>
+          <p class="form-note">Sending opens your email app.</p>
+        </div>
+      </form>
     </div>
-    <form class="form" id="contact-form" action="mailto:hello@nowo.space" method="post" enctype="text/plain">
-      <div class="field">
-        <label for="cf-name">Name</label>
-        <input class="input" id="cf-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
-      </div>
-      <div class="field">
-        <label for="cf-email">Email</label>
-        <input class="input" id="cf-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
-      </div>
-      <div class="field full">
-        <label for="cf-msg">Message</label>
-        <textarea class="input" id="cf-msg" name="message" rows="5" placeholder="How can we help?"></textarea>
-      </div>
-      <div class="full">
-        <button type="submit" class="btn btn-primary">Send message</button>
-      </div>
-    </form>
   </section>
 </div>
 
 </main>
 
-<div class="wrap">
-  <footer class="site-footer">
-    <address>
-      <strong>Nowo Coworking Space GmbH</strong><br>
-      Bahnhofstrasse 14, 9443 Widnau<br>
-      <a href="tel:+41798189171">079 818 91 71</a> · <a href="mailto:hello@nowo.space">hello@nowo.space</a>
-    </address>
-    <ul class="foot-links">
-      <li><a href="https://booking.nowo.space" target="_blank" rel="noopener">booking.nowo.space</a></li>
-      <li><a href="https://instagram.com/nowocoworkingspace" target="_blank" rel="noopener">Instagram</a></li>
-      <li><a href="https://www.linkedin.com/company/106627344" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="../impressum.html" hreflang="de-CH">Legal notice (DE)</a></li>
-      <li><a href="../datenschutz.html" hreflang="de-CH">Privacy policy (DE)</a></li>
-    </ul>
-    <span style="flex-basis: 100%;">© 2026 Nowo · Coworking Space Widnau</span>
-  </footer>
-</div>
+<footer class="site-footer2">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="./" aria-label="Nowo home"><img src="../assets/img/nowo-wordmark.png" width="422" height="139" alt="Nowo Coworking Space"></a>
+        <address><strong>Nowo Coworking Space GmbH</strong><br>Bahnhofstrasse 14<br>9443 Widnau, Switzerland</address>
+      </div>
+      <div><h2>Plans</h2><ul><li><a href="plans.html">Plans & prices</a></li><li><a href="meeting-room-rhine-valley.html">Meeting room</a></li><li><a href="business-address-rhine-valley.html">Business address</a></li><li><a href="coworking-for-companies.html">For companies</a></li></ul></div>
+      <div><h2>Nowo</h2><ul><li><a href="location.html">Location</a></li><li><a href="about.html">About us</a></li><li><a href="coworking-cross-border-commuters.html">Cross-border commuters</a></li><li><a href="coworking-heerbrugg.html">From Heerbrugg</a></li></ul></div>
+      <div><h2>Contact</h2><ul><li><a href="tel:+41798189171">079 818 91 71</a></li><li><a href="mailto:hello@nowo.space">hello@nowo.space</a></li><li><a href="https://booking.nowo.space" target="_blank" rel="noopener">Booking portal</a></li><li><a href="https://instagram.com/nowocoworkingspace" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/106627344" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>© 2026 Nowo Coworking Space GmbH</span><span class="row" style="gap: 8px 20px;"><a href="../impressum.html">Legal notice</a><a href="../datenschutz.html">Privacy policy</a><button type="button" class="btn-link" data-consent-open style="color: inherit; font-size: inherit;">Cookie settings</button></span></div>
+  </div>
+</footer>
 </body>
 </html>

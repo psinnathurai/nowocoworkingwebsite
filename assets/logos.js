@@ -1,7 +1,7 @@
 /* =========================================================================
-   MITGLIEDER-LOGOS  ·  «Sie arbeiten im Nowo» / «They work at Nowo»
+   REFERENZEN-SLIDER  ·  «Sie arbeiten im Nowo» / «They work at Nowo»
    -------------------------------------------------------------------------
-   Pflege: nur diese Liste bearbeiten. Reihenfolge = Anzeige-Reihenfolge.
+   Pflege: nur diese Liste bearbeiten. Reihenfolge = Reihenfolge der Slides.
    Pflichtfelder:
    - name:  Firmenname (wird auch als Alt-Text verwendet)
    - logo:  Dateiname im Ordner assets/logos/  (null = Name wird als Text
@@ -9,225 +9,217 @@
    - url:   Website der Firma (öffnet in neuem Tab)
    Optionale Felder:
    - scale:    optischer Ausgleich der Höhe, z. B. 1.25 für runde/quadratische
-               Logos, 0.85 für sehr wuchtige (Standard 1)
+               Logos, 0.85 für sehr breite (Standard 1)
    - plate:    "dark" = dunkle Fläche hinter dem Logo (für Logos mit weisser Schrift)
-   - quote_de / quote_en / author: Testimonial, erscheint als Karte beim Hovern
+   - dim:      false = Logo immer in Originalfarbe (für sehr helle Logos)
+   - quote_de / quote_en / author: Zitat, wird im Slide angezeigt
    Eintrag entfernen (z. B. wenn ein Mitglied die Zustimmung zurückzieht):
-   Zeile bzw. Block löschen, optional die Datei in assets/logos/ ebenfalls löschen.
+   Block löschen, optional die Datei in assets/logos/ ebenfalls löschen.
    ========================================================================= */
+var NOWO_AUTOPLAY_MS = 5000; // Zeit pro Slide in Millisekunden
+
 var NOWO_MEMBER_LOGOS = [
-  { name: "AdVision",          logo: "advision.svg",         url: "https://advision.swiss" },
+  { name: "Swiss Life Select", logo: "swisslife-select.png", url: "https://www.swisslife-select.ch" },
   { name: "Hechenbros",        logo: "hechenbros.svg",       url: "https://hechenbros.ch",
     author: "Klemens",
     quote_de: "Das Nowo ist für mich der ideale Mix aus professionellem Arbeitsplatz und entspannter Atmosphäre: schnelle Verbindung, gute Arbeitsplätze, genügend Parkplätze, Rückzugsmöglichkeiten für Calls und Kaffee, der den Namen verdient. Dazu kommen Leute, von denen man nebenbei noch etwas lernt.",
     quote_en: "For me, Nowo is the ideal mix of a professional workplace and a relaxed atmosphere: a fast connection, good desks, plenty of parking, quiet spots for calls and coffee worthy of the name. Plus people you learn something from along the way." },
-  { name: "assopersonal",      logo: "assopersonal.png",     url: "https://www.assopersonal.ch" },
   { name: "5th Era",           logo: "5th-era.png",          url: "https://5th-era.nl/HOME/", scale: 1.3,
     author: "Julian",
     quote_de: "Wenn ich in der Schweiz bin, komme ich immer gerne zu Nowo. Freundliche Führung, vielseitige Nutzungsmöglichkeiten und hilfsbereite Coworker, die gerne mitdenken und unterstützen. Eine rundum angenehme Atmosphäre!",
     quote_en: "Whenever I'm in Switzerland, I always enjoy coming to Nowo. Friendly management, lots of ways to use the space and helpful coworkers who are happy to think along and lend a hand. A thoroughly pleasant atmosphere!" },
-  { name: "oceanleaf",         logo: "oceanleaf.png",        url: "https://oceanleaf.ch" },
-  { name: "SXP Consulting",    logo: "sxp-consulting.svg",   url: "https://sxp-consulting.ch/", scale: 0.9 },
+  { name: "Studio Paolo Vaccariello", logo: null,            url: "https://paolovaccariello.ch",
+    author: "Paolo Vaccariello",
+    quote_de: "Als freischaffender Unternehmer finde ich im nowo Coworking Space in Widnau einen flexiblen, professionellen Arbeitsraum – rund um die Uhr und passend zu meinen Bedürfnissen.",
+    quote_en: "As a freelance entrepreneur, I find a flexible, professional workspace at the nowo coworking space in Widnau – around the clock and suited to my needs." },
+  { name: "Pixelliebe Studio", logo: "pixelliebe.png",       url: "https://pixelliebe.ch/", scale: 1.3,
+    author: "Delia",
+    quote_de: "Wunderbar, wenn man in der Umgebung ist und einen voll ausgestatteten Arbeitsplatz für zwischendurch oder langfristig sucht! Im NOWO findet man eine richtige Büroumgebung, in der es an nichts fehlt: von einer tollen Community, mit der man sich vernetzen kann, über Verpflegungsräume bis hin zu separaten Kabinen für wichtige Calls und Meetings ist alles vorhanden.",
+    quote_en: "Wonderful if you're in the area and looking for a fully equipped workspace, whether for the odd day or the long term! At NOWO you'll find a proper office environment that lacks nothing: from a great community to network with, to kitchen and break areas, to separate booths for important calls and meetings, it's all there." },
   { name: "baseVISION",        logo: "basevision.png",       url: "https://www.basevision.ch" },
+  { name: "SXP Consulting",    logo: "sxp-consulting.svg",   url: "https://sxp-consulting.ch/", scale: 0.9 },
+  { name: "TC Training",       logo: "tc-training.png",      url: "https://tc-training.fit", plate: "dark" },
   { name: "NDynamics",         logo: null,                   url: "https://www.ndynamics.ch",
     author: "Nando",
     quote_de: "Wer auf moderne Einrichtung steht, ist im Nowo bestens bedient. Offene Menschen, eine tolle Atmosphäre und dank CleverKey rund um die Uhr Zugang, das schätze ich besonders. Ein Tipp für jedermann.",
     quote_en: "If you like modern interiors, Nowo is the place for you. Open-minded people, a great atmosphere and round-the-clock access thanks to CleverKey, which I particularly appreciate. A tip for everyone." },
-  { name: "Swiss Life Select", logo: "swisslife-select.png", url: "https://www.swisslife-select.ch" },
-  { name: "Studio Paolo Vaccariello", logo: null,            url: "https://www.paolovaccariello.com" },
-  { name: "TC Training",       logo: "tc-training.png",      url: "https://tc-training.fit", plate: "dark" },
-  { name: "Netzwerk Rheintal", logo: "netzwerk-rheintal.png", url: "https://netzwerk-rheintal.ch/", scale: 1.15 }
+  { name: "oceanleaf",         logo: "oceanleaf.png",        url: "https://oceanleaf.ch" },
+  { name: "AdVision",          logo: "advision.svg",         url: "https://advision.swiss" },
+  { name: "assopersonal",      logo: "assopersonal.png",     url: "https://www.assopersonal.ch" },
+  { name: "Squaretech",        logo: "squaretech.png",       url: "https://squaretech.ch/", scale: 0.8 },
+  { name: "EMTI Lifestyle GmbH", logo: "emti.png",          url: "https://emti-lifestyle.ch", scale: 0.85 },
+  { name: "Netzwerk Rheintal", logo: "netzwerk-rheintal.png", url: "https://netzwerk-rheintal.ch/", scale: 1.15, dim: false }
 ];
 
 /* Ab hier nichts ändern. */
 (function () {
   var script = document.currentScript;
   var base = new URL("logos/", script ? script.src : location.href).href;
-  var lang = (document.documentElement.lang || "de").slice(0, 2) === "en" ? "en" : "de";
-  var visitLabel = lang === "en" ? "Visit website" : "Website besuchen";
-  var bubble = '<svg class="logos-hint" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
-  var uid = 0;
+  var en = (document.documentElement.lang || "de").slice(0, 2) === "en";
+  var T = en
+    ? { visit: "Visit website", prev: "Previous reference", next: "Next reference", slide: "of", member: "Member of the Nowo community" }
+    : { visit: "Website besuchen", prev: "Vorherige Referenz", next: "Nächste Referenz", slide: "von", member: "Mitglied der Nowo-Community" };
+  var arrow = function (d) {
+    return '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="' +
+      (d < 0 ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7") +
+      '" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>';
+  };
+  function quoteOf(m) { return (en ? m.quote_en : m.quote_de) || m.quote_de || null; }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
 
-  function quoteOf(m) { return m["quote_" + lang] || m.quote_de || null; }
+  function slide(m, i, n) {
+    var s = el("div", "refs-slide");
+    s.setAttribute("role", "group");
+    s.setAttribute("aria-roledescription", "slide");
+    s.setAttribute("aria-label", (i + 1) + " " + T.slide + " " + n + ": " + m.name);
 
-  function item(m, idx, hidden, descId) {
-    var li = document.createElement("li");
-    li.className = "logos-item";
-    var a = document.createElement("a");
-    a.href = m.url; a.target = "_blank"; a.rel = "noopener";
-    a.setAttribute("data-idx", idx);
-    if (m.scale) a.style.setProperty("--logo-scale", m.scale);
-    if (hidden) a.tabIndex = -1;
-    if (m.plate === "dark") a.classList.add("has-plate");
+    var logo = el("a", "refs-logo");
+    logo.href = m.url; logo.target = "_blank"; logo.rel = "noopener";
+    if (m.scale) logo.style.setProperty("--logo-scale", m.scale);
+    if (m.plate === "dark") logo.classList.add("has-plate");
+    if (m.dim === false) logo.classList.add("no-dim");
     if (m.logo) {
-      var img = document.createElement("img");
-      img.src = base + m.logo; img.alt = m.name; img.decoding = "async";
-      a.appendChild(img);
+      var img = el("img"); img.src = base + m.logo; img.alt = m.name; img.decoding = "async"; img.draggable = false;
+      logo.appendChild(img);
     } else {
-      a.classList.add("logos-text"); a.textContent = m.name;
+      logo.appendChild(el("span", "refs-logo-text", m.name));
     }
-    if (quoteOf(m)) {
-      a.classList.add("has-quote");
-      a.insertAdjacentHTML("beforeend", bubble);
-      if (descId) a.setAttribute("aria-describedby", descId);
+    s.appendChild(logo);
+
+    var body = el("div", "refs-body");
+    var q = quoteOf(m);
+    if (q) {
+      body.classList.add("has-quote");
+      var bq = el("blockquote", "refs-quote");
+      bq.appendChild(el("p", null, "«" + q + "»"));
+      body.appendChild(bq);
+      body.appendChild(el("p", "refs-meta", m.author + " · " + m.name));
+    } else {
+      body.appendChild(el("p", "refs-name", m.name));
+      body.appendChild(el("p", "refs-meta", T.member));
     }
-    li.appendChild(a);
-    return li;
+    var link = el("a", "refs-link", T.visit + " ↗");
+    link.href = m.url; link.target = "_blank"; link.rel = "noopener";
+    body.appendChild(link);
+    s.appendChild(body);
+    return s;
   }
 
-  /* ---------- Testimonial-Karte (ausserhalb des Bandes, position: fixed) ---------- */
-  function setupCard(root) {
-    var card = document.createElement("div");
-    card.className = "logos-card";
-    card.setAttribute("role", "tooltip");
-    card.id = "logos-card-" + (++uid);
-    card.hidden = true;
-    card.innerHTML = '<span class="logos-card-mark" aria-hidden="true">«</span><p class="logos-card-quote"></p>' +
-      '<p class="logos-card-meta"></p><a class="logos-card-link" target="_blank" rel="noopener"></a><span class="logos-card-arrow" aria-hidden="true"></span>';
-    document.body.appendChild(card);
-
-    var current = null, closeT = null, hideT = null, lastPointer = "mouse";
-
-    function place() {
-      if (!current) return;
-      var r = current.getBoundingClientRect(), vw = document.documentElement.clientWidth, vh = window.innerHeight;
-      var cw = card.offsetWidth, ch = card.offsetHeight, gap = 12, m = 12;
-      var roomAbove = r.top - gap - m, roomBelow = vh - r.bottom - gap - m;
-      var below = ch > roomAbove && (ch <= roomBelow || roomBelow > roomAbove);
-      var top = below ? r.bottom + gap : r.top - ch - gap;
-      var clamped = Math.max(m, Math.min(top, vh - ch - m));
-      card.classList.toggle("is-clamped", clamped !== top);
-      top = clamped;
-      var cx = r.left + r.width / 2;
-      var left = Math.min(Math.max(cx - cw / 2, m), vw - cw - m);
-      card.style.left = left + "px"; card.style.top = top + "px";
-      card.style.setProperty("--arrow-x", Math.min(Math.max(cx - left, 16), cw - 16) + "px");
-      card.classList.toggle("is-below", below);
-    }
-
-    function open(a) {
-      clearTimeout(closeT); clearTimeout(hideT);
-      var m = NOWO_MEMBER_LOGOS[+a.getAttribute("data-idx")];
-      if (current !== a) {
-        card.querySelector(".logos-card-quote").textContent = quoteOf(m);
-        card.querySelector(".logos-card-meta").textContent = m.author + " · " + m.name;
-        var link = card.querySelector(".logos-card-link");
-        link.href = m.url; link.textContent = visitLabel + " ↗";
-      }
-      current = a;
-      root.classList.add("is-paused");
-      card.hidden = false;
-      place();
-      requestAnimationFrame(function () { card.classList.add("is-open"); });
-    }
-    function close() {
-      clearTimeout(closeT);
-      if (!current) return;
-      current = null;
-      root.classList.remove("is-paused");
-      card.classList.remove("is-open");
-      hideT = setTimeout(function () { if (!current) card.hidden = true; }, 160);
-    }
-    function closeSoon() { clearTimeout(closeT); closeT = setTimeout(close, 250); }
-
-    function quoteLink(e) {
-      var a = e.target.closest && e.target.closest("a.has-quote");
-      return a && root.contains(a) ? a : null;
-    }
-
-    root.addEventListener("pointerdown", function (e) { lastPointer = e.pointerType || "mouse"; }, true);
-    root.addEventListener("pointerover", function (e) {
-      if (e.pointerType === "touch") return;
-      var a = quoteLink(e); if (a) open(a);
-    });
-    root.addEventListener("pointerout", function (e) {
-      if (e.pointerType === "touch") return;
-      var a = quoteLink(e); if (a && !a.contains(e.relatedTarget)) closeSoon();
-    });
-    root.addEventListener("click", function (e) {
-      var a = quoteLink(e);
-      if (a && lastPointer !== "mouse" && current !== a) { e.preventDefault(); open(a); }
-      lastPointer = "mouse";
-    });
-    root.addEventListener("focusin", function (e) { var a = quoteLink(e); if (a) open(a); });
-    root.addEventListener("focusout", function (e) {
-      if (!card.contains(e.relatedTarget) && quoteLink(e)) closeSoon();
-    });
-    card.addEventListener("pointerenter", function () { clearTimeout(closeT); });
-    card.addEventListener("pointerleave", function (e) { if (e.pointerType !== "touch") closeSoon(); });
-    card.addEventListener("focusout", function (e) {
-      if (!card.contains(e.relatedTarget) && e.relatedTarget !== current) closeSoon();
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && current) { var a = current; close(); if (card.contains(document.activeElement)) a.focus(); }
-    });
-    document.addEventListener("pointerdown", function (e) {
-      if (current && !card.contains(e.target) && !current.contains(e.target)) close();
-    });
-    window.addEventListener("scroll", place, { passive: true });
-    window.addEventListener("resize", place);
-    return { close: close };
-  }
-
-  /* ---------- Band ---------- */
   function build(root) {
-    if (root._card) root._card.close(); else root._card = setupCard(root);
-    var vp = root.querySelector(".logos-viewport");
+    var list = NOWO_MEMBER_LOGOS, n = list.length;
+    if (!n) { root.hidden = true; return; }
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    root.classList.add("refs");
+    root.setAttribute("aria-roledescription", "carousel");
+    root.style.setProperty("--refs-ms", NOWO_AUTOPLAY_MS + "ms");
+
+    // Steuerung im Kopf
+    var head = root.querySelector(".logos-head");
+    var headText = el("div", "logos-head-text");
+    while (head.firstChild) headText.appendChild(head.firstChild);
+    head.appendChild(headText);
+    var ctrl = el("div", "refs-ctrl");
+    var count = el("p", "refs-count"); count.setAttribute("aria-hidden", "true");
+    var prev = el("button", "refs-btn"); prev.type = "button"; prev.innerHTML = arrow(-1); prev.setAttribute("aria-label", T.prev);
+    var next = el("button", "refs-btn"); next.type = "button"; next.innerHTML = arrow(1); next.setAttribute("aria-label", T.next);
+    ctrl.appendChild(count); ctrl.appendChild(prev); ctrl.appendChild(next);
+    head.appendChild(ctrl);
+
+    // Slides: Klon des letzten vorne, Klon des ersten hinten -> endlos ohne Sprung
+    var vp = root.querySelector(".logos-viewport");
     vp.innerHTML = "";
-    var track = document.createElement("div");
-    track.className = "logos-track";
-    vp.appendChild(track);
-
-    // Zitate als Beschreibung für Screenreader (aria-describedby)
-    var desc = document.createElement("div");
-    desc.hidden = true;
-    vp.appendChild(desc);
-    var descIds = NOWO_MEMBER_LOGOS.map(function (m, i) {
-      var q = quoteOf(m); if (!q) return null;
-      var p = document.createElement("p");
-      p.id = "logos-q-" + uid + "-" + i;
-      p.textContent = "«" + q + "» " + m.author + " · " + m.name;
-      desc.appendChild(p);
-      return p.id;
-    });
-
-    var first = document.createElement("ul");
-    first.className = "logos-set";
+    vp.setAttribute("aria-live", reduce ? "polite" : "off");
+    var track = el("div", "refs-track");
+    var real = list.map(function (m, i) { return slide(m, i, n); });
+    var first = real[0].cloneNode(true), last = real[n - 1].cloneNode(true);
+    [first, last].forEach(function (c) { c.setAttribute("aria-hidden", "true"); c.removeAttribute("role"); c.removeAttribute("aria-label"); c.removeAttribute("aria-roledescription"); });
+    track.appendChild(last);
+    real.forEach(function (s) { track.appendChild(s); });
     track.appendChild(first);
-    NOWO_MEMBER_LOGOS.forEach(function (m, i) { first.appendChild(item(m, i, false, descIds[i])); });
-    if (reduce) { root.classList.add("is-static"); return; }
-    root.classList.remove("is-static");
+    vp.appendChild(track);
+    var all = Array.prototype.slice.call(track.children);
 
-    var imgs = Array.prototype.slice.call(first.querySelectorAll("img"));
-    Promise.all(imgs.map(function (i) { return i.decode ? i.decode().catch(function () {}) : null; }))
-      .then(function () { fill(vp, track, first); });
-  }
+    var bar = el("div", "refs-progress"); bar.setAttribute("aria-hidden", "true");
+    var fillEl = el("span"); bar.appendChild(fillEl);
+    root.appendChild(bar);
+    if (reduce) bar.hidden = true;
 
-  function fill(vp, track, first) {
-    // Liste wiederholen, bis eine Gruppe breiter als der Bildschirm ist, dann die
-    // ganze Gruppe einmal duplizieren -> nahtlose Schleife bei -50 %.
-    var guard = 0;
-    while (first.scrollWidth < vp.clientWidth + 200 && guard++ < 10) {
-      NOWO_MEMBER_LOGOS.forEach(function (m, i) { first.appendChild(item(m, i, true, null)); });
+    var pos = 1, busy = false;
+    function setX(px, anim) {
+      track.style.transition = anim && !reduce ? "" : "none";
+      track.style.transform = "translate3d(calc(" + (-pos * 100) + "% + " + (px || 0) + "px),0,0)";
     }
-    var copy = first.cloneNode(true);
-    copy.setAttribute("aria-hidden", "true");
-    copy.querySelectorAll("a").forEach(function (a) { a.tabIndex = -1; a.removeAttribute("aria-describedby"); });
-    track.appendChild(copy);
-    // Konstante Geschwindigkeit: 35 px pro Sekunde, unabhängig von der Anzahl Logos
-    track.style.setProperty("--logos-dur", Math.max(20, first.scrollWidth / 35) + "s");
+    function sync() {
+      var idx = ((pos - 1) % n + n) % n;
+      count.textContent = pad(idx + 1) + " / " + pad(n);
+      all.forEach(function (s, k) { var on = k === pos; s.inert = !on; s.classList.toggle("is-active", on); });
+    }
+    function go(p) {
+      if (busy) return;
+      pos = p; busy = !reduce;
+      setX(0, true); sync();
+      if (reduce) wrap();
+    }
+    function wrap() {
+      busy = false;
+      if (pos === 0) { pos = n; setX(0, false); sync(); }
+      else if (pos === n + 1) { pos = 1; setX(0, false); sync(); }
+    }
+    track.addEventListener("transitionend", function (e) { if (e.target === track) wrap(); });
+
+    // Autoplay
+    var timer = null, hover = false, focus = false;
+    function stop() { clearTimeout(timer); timer = null; root.classList.remove("is-playing"); }
+    function start() {
+      stop();
+      if (reduce || hover || focus || document.hidden) return;
+      void fillEl.offsetWidth; // Fortschrittsbalken neu starten
+      root.classList.add("is-playing");
+      timer = setTimeout(function () { go(pos + 1); start(); }, NOWO_AUTOPLAY_MS);
+    }
+    function manual(p) { go(p); start(); }
+    prev.addEventListener("click", function () { manual(pos - 1); });
+    next.addEventListener("click", function () { manual(pos + 1); });
+    root.addEventListener("mouseenter", function () { hover = true; stop(); });
+    root.addEventListener("mouseleave", function () { hover = false; start(); });
+    root.addEventListener("focusin", function () { focus = true; stop(); });
+    root.addEventListener("focusout", function (e) { if (!root.contains(e.relatedTarget)) { focus = false; start(); } });
+    document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+    root.addEventListener("keydown", function (e) {
+      if (e.target.closest(".refs-ctrl") || e.target.closest(".refs-slide")) {
+        if (e.key === "ArrowLeft") { e.preventDefault(); manual(pos - 1); }
+        if (e.key === "ArrowRight") { e.preventDefault(); manual(pos + 1); }
+      }
+    });
+
+    // Wischen (Touch / Stift)
+    var sx = 0, sy = 0, dx = 0, drag = false, moved = false, pid = null;
+    vp.addEventListener("pointerdown", function (e) {
+      if (e.pointerType === "mouse" || busy) return;
+      pid = e.pointerId; sx = e.clientX; sy = e.clientY; dx = 0; drag = false; moved = false;
+    });
+    vp.addEventListener("pointermove", function (e) {
+      if (e.pointerId !== pid) return;
+      var mx = e.clientX - sx, my = e.clientY - sy;
+      if (!drag && Math.abs(mx) > 8 && Math.abs(mx) > Math.abs(my)) { drag = true; moved = true; stop(); }
+      if (drag) { dx = mx; setX(dx, false); }
+    });
+    function end(e) {
+      if (e.pointerId !== pid) return;
+      pid = null;
+      if (!drag) return;
+      drag = false;
+      var th = Math.min(60, vp.clientWidth * 0.15);
+      if (dx < -th) manual(pos + 1); else if (dx > th) manual(pos - 1); else { setX(0, true); start(); }
+    }
+    vp.addEventListener("pointerup", end);
+    vp.addEventListener("pointercancel", end);
+    vp.addEventListener("click", function (e) { if (moved) { e.preventDefault(); moved = false; } }, true);
+
+    setX(0, false); sync(); start();
   }
 
-  function init() {
-    var roots = document.querySelectorAll("[data-member-logos]");
-    roots.forEach(build);
-    var w = window.innerWidth, t;
-    window.addEventListener("resize", function () {
-      if (window.innerWidth === w) return;
-      w = window.innerWidth; clearTimeout(t);
-      t = setTimeout(function () { roots.forEach(build); }, 200);
-    });
-  }
+  function init() { document.querySelectorAll("[data-member-logos]").forEach(build); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();

@@ -207,6 +207,24 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 .field label { font-size: 14px; font-weight: 700; color: var(--color-text); }
 .field .opt { font-weight: 400; color: var(--color-muted); }
 .form-note { font-size: 14px; color: var(--color-muted); margin: 0; }
+/* Formularversand: Honeypot, ALTCHA, Status */
+.hp-field { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.form .btn:disabled { opacity: .45; cursor: not-allowed; }
+.form .btn-primary:disabled:hover { background: var(--color-accent-800); border-color: var(--color-accent-800); }
+.form .btn[aria-busy="true"] { opacity: .75; cursor: progress; }
+.form .btn[aria-busy="true"]::after { content: ""; flex: none; width: 14px; height: 14px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: nowo-spin .8s linear infinite; }
+@keyframes nowo-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .form .btn[aria-busy="true"]::after { animation-duration: 2.4s; } }
+.form-status { margin: 0; padding: 12px 16px; font-size: 15px; line-height: 1.5; border: 2px solid var(--color-divider); }
+.form-status:empty { display: none; }
+.form-status.is-ok { background: var(--color-accent-100); border-color: var(--color-accent-700); color: var(--color-accent-900); }
+.form-status.is-err { background: var(--color-accent-2-100); border-color: var(--color-accent-2-500); color: var(--color-accent-2-700); }
+.form-status a { color: inherit; text-decoration: underline; }
+altcha-widget { display: block; font-family: var(--font-body); font-size: 14px;
+  --altcha-border-width: 2px; --altcha-border-radius: 0; --altcha-max-width: 320px;
+  --altcha-color-base: var(--color-paper); --altcha-color-border: var(--color-divider); --altcha-color-text: var(--color-text);
+  --altcha-color-border-focus: var(--color-accent-700); --altcha-color-error-text: var(--color-accent-2-700); }
+altcha-widget input[type="checkbox"] { accent-color: var(--color-accent-800); }
 @media (max-width: 560px) { .form { grid-template-columns: 1fr; } }
 
 /* Angebote */

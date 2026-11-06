@@ -11,11 +11,11 @@
 <meta name="theme-color" content="#F5F2EC">
 <link rel="preconnect" href="https://nowocoworkingspace-dkcscqdjdsbnhveu.westeurope-01.azurewebsites.net" crossorigin>
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=2">
 <link rel="icon" type="image/png" href="assets/img/nowo-logo.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <script>document.documentElement.classList.add("js")</script>
-<script src="assets/main.js" defer></script>
+<script src="assets/main.js?v=2" defer></script>
 <!-- Google tag (gtag.js), lädt erst nach Einwilligung -->
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -62,7 +62,7 @@
 <main id="main" class="wrap">
 <div class="legal">
 <h1>Datenschutzerklärung</h1>
-  <p class="updated">Zuletzt aktualisiert am: 27.09.2026</p>
+  <p class="updated">Zuletzt aktualisiert am: 06.11.2026</p>
 
   <p>Wir legen grossen Wert darauf, dass der Umgang mit Personendaten transparent ist. Diese Datenschutzerklärung gibt Auskunft darüber, welche personenbezogenen Daten wir sammeln, zu welchem Zweck und an wen wir sie weitergeben. Um eine hohe Transparenz zu gewährleisten, wird diese Datenschutzerklärung regelmässig überprüft und aktualisiert.</p>
 
@@ -71,7 +71,9 @@
     <li>GitHub Pages (Hosting der Website)</li>
     <li>Google Analytics (Webanalyse)</li>
     <li>Google Maps (eingebettete Standortkarte)</li>
-    <li>Microsoft Azure (Anzeige der aktuell freien Arbeitsplätze)</li>
+    <li>Microsoft Azure (Anzeige der aktuell freien Arbeitsplätze, Versand der Kontaktformulare)</li>
+    <li>Microsoft Exchange Online (E-Mail-Postfach, Speicherort Schweiz)</li>
+    <li>ALTCHA (Spamschutz der Kontaktformulare, selbst bereitgestellt)</li>
     <li>Google Ads (Online-Werbung)</li>
     <li>Buchungsplattform booking.nowo.space (verlinkt)</li>
     <li>Links zu externen Plattformen (360°-Rundgang, YouTube, Instagram, LinkedIn, Google-Bewertungen)</li>
@@ -190,7 +192,10 @@
   <p>Die Anzeige der aktuell freien Arbeitsplätze wird beim Aufruf der Website und danach regelmässig von einer eigenen Schnittstelle abgefragt, die wir bei Microsoft Azure (Rechenzentrumsregion Westeuropa) betreiben. Dabei wird technisch bedingt Ihre IP-Adresse an diese Schnittstelle übermittelt. Die Schnittstelle liefert ausschliesslich die Anzahl belegter und freier Plätze aus; es werden keine Angaben über einzelne Mitglieder angezeigt oder von Ihnen gespeichert.</p>
 
   <h3>4.6 Kontaktformular und E-Mail</h3>
-  <p>Das Kontaktformular speichert oder übermittelt keine Daten über unsere Website. Beim Absenden öffnet sich Ihr eigenes E-Mail-Programm mit einer vorbereiteten Nachricht an hello@nowo.space; erst wenn Sie diese E-Mail versenden, erhalten wir Ihren Namen, Ihre E-Mail-Adresse und Ihre Nachricht. Diese Daten verwenden wir ausschliesslich zur Bearbeitung Ihrer Anfrage.</p>
+  <p>Wenn Sie uns über das Kontaktformular oder das Formular für Firmenanfragen schreiben, übermittelt Ihr Browser Ihre Angaben (Name, E-Mail-Adresse und Nachricht; bei Firmenanfragen zusätzlich Firma, Telefonnummer, Anzahl Personen und Bedarf) sowie technisch bedingt Ihre IP-Adresse an eine eigene Schnittstelle, die wir bei Microsoft Azure (Rechenzentrumsregion Schweiz Nord) betreiben. Die Schnittstelle leitet Ihre Anfrage über Microsoft Graph als E-Mail an unser Postfach hello@nowo.space weiter. Sie speichert Ihre Angaben nur, solange die Nachricht verarbeitet wird, und nicht darüber hinaus. Unser Postfach wird bei Microsoft Exchange Online betrieben; die E-Mails werden dabei in der Schweiz gespeichert. Ihre Anfrage verwenden wir ausschliesslich zu deren Bearbeitung.</p>
+  <p>Für den Betrieb und die Fehleranalyse der Schnittstelle nutzen wir Azure Application Insights, einen Dienst von Microsoft Azure, ebenfalls in der Rechenzentrumsregion Schweiz Nord. Dabei werden technische Protokolldaten erfasst, etwa Zeitpunkt, Dauer und Ergebnis einer Anfrage. Ihre IP-Adresse wird dabei nicht gespeichert, sondern nur zur groben Bestimmung des Landes verwendet und anschliessend verworfen. Die Protokolldaten werden spätestens nach 90 Tagen automatisch gelöscht.</p>
+  <p>Zum Schutz vor Spam nutzen wir ALTCHA, eine quelloffene Lösung, die wir selbst auf unserer Website bereitstellen. Ihr Browser löst dabei im Hintergrund eine kleine Rechenaufgabe, die er von unserer eigenen Schnittstelle erhält. Dafür werden keine Cookies gesetzt und keine Daten an Drittanbieter übermittelt. Zusätzlich enthalten die Formulare ein für Besucherinnen und Besucher unsichtbares Feld sowie den Zeitpunkt, zu dem das Formular geladen wurde, um automatisierte Eingaben zu erkennen.</p>
+  <p>Sie können uns auch direkt per E-Mail an <a href="mailto:hello@nowo.space">hello@nowo.space</a> schreiben.</p>
 
   <h3>4.7 Schriftarten und Cookies</h3>
   <p>Die auf dieser Website verwendeten Schriftarten werden lokal von unserem Server geladen; es wird dafür keine Verbindung zu Drittanbietern hergestellt. Für die Webanalyse setzt Google Analytics Cookies (siehe 4.9). Google Maps setzt Cookies erst, wenn Sie die Karte laden (siehe 4.4).</p>

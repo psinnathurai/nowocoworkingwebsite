@@ -25,7 +25,7 @@
 <meta name="twitter:image" content="https://nowo.space/assets/og-image.jpg">
 <link rel="preconnect" href="https://nowocoworkingspace-dkcscqdjdsbnhveu.westeurope-01.azurewebsites.net" crossorigin>
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=2">
 <link rel="icon" type="image/png" href="assets/img/nowo-logo.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -98,7 +98,8 @@
 }
 </script>
 <script>document.documentElement.classList.add("js")</script>
-<script src="assets/main.js" defer></script>
+<script src="assets/main.js?v=2" defer></script>
+<script type="module" src="assets/vendor/altcha.js"></script>
 <!-- Google tag (gtag.js), lädt erst nach Einwilligung -->
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -159,14 +160,17 @@
 <section class="section" id="anfrage" aria-label="Firmenlösung anfragen.">
   <div class="contact">
     <div class="sec-head"><p class="kicker">Anfrage</p><h2 class="sec-title">Firmenlösung anfragen.</h2><p class="sec-intro">Sag uns kurz, was ihr braucht. Wir melden uns mit einem Angebot. Felder ohne «optional» sind Pflichtfelder.</p></div>
-    <form class="form" id="b2b-form" action="mailto:hello@nowo.space" method="post" enctype="text/plain">
+    <form class="form" id="b2b-form">
       <div class="field"><label for="b-name">Name</label><input class="input" id="b-name" name="name" type="text" autocomplete="name" required></div>
       <div class="field"><label for="b-company">Firma</label><input class="input" id="b-company" name="company" type="text" autocomplete="organization" required></div>
       <div class="field"><label for="b-email">E-Mail</label><input class="input" id="b-email" name="email" type="email" autocomplete="email" required></div>
       <div class="field"><label for="b-phone">Telefon <span class="opt">(optional)</span></label><input class="input" id="b-phone" name="phone" type="tel" autocomplete="tel"></div>
       <div class="field full"><label for="b-people">Anzahl Personen</label><select class="input" id="b-people" name="people"><option>1</option><option>2–3</option><option>4–6</option><option>mehr als 6</option></select></div>
       <div class="field full"><label for="b-need">Was braucht ihr? <span class="opt">(optional)</span></label><textarea class="input" id="b-need" name="need" rows="4" placeholder="z.B. 3 Personen, je 2 Tage pro Woche, ab März"></textarea></div>
-      <div class="full row"><button type="submit" class="btn btn-primary">Anfrage senden →</button><p class="form-note">Beim Senden öffnet sich dein E-Mail-Programm.</p></div>
+      <div class="hp-field" aria-hidden="true"><label for="b-website">Website</label><input id="b-website" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true"></div>
+      <div class="full"><altcha-widget challengeurl="https://func-contact-nowo-prd-szn-01.azurewebsites.net/api/altcha-challenge" auto="onload" hidefooter hidelogo strings="{&quot;label&quot;:&quot;Ich bin kein Roboter&quot;,&quot;verifying&quot;:&quot;Wird überprüft …&quot;,&quot;verified&quot;:&quot;Überprüft&quot;,&quot;error&quot;:&quot;Überprüfung fehlgeschlagen. Bitte versuche es erneut.&quot;,&quot;expired&quot;:&quot;Überprüfung abgelaufen. Bitte versuche es erneut.&quot;,&quot;waitAlert&quot;:&quot;Überprüfung läuft … bitte warte einen Moment.&quot;}"></altcha-widget></div>
+      <div class="full row"><button type="submit" class="btn btn-primary" disabled>Anfrage senden →</button><p class="form-note">Oder schreib uns direkt an <a href="mailto:hello@nowo.space">hello@nowo.space</a>.</p></div>
+      <p class="form-status full" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>

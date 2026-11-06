@@ -31,16 +31,6 @@
     });
   }
 
-  var form = document.getElementById("contact-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var subject = encodeURIComponent(isEN ? "Inquiry via nowo.space" : "Anfrage über nowo.space");
-      var body = encodeURIComponent("Name: " + form.name.value + "\n" + (isEN ? "Email" : "E-Mail") + ": " + form.email.value + "\n\n" + form.message.value);
-      window.location.href = "mailto:hello@nowo.space?subject=" + subject + "&body=" + body;
-    });
-  }
-
   var badge = document.getElementById("avail-badge");
   if (badge) {
     var render = function (d) {
@@ -122,17 +112,121 @@
   window.nowoResetMaps = function () { try { localStorage.removeItem(KEY); } catch (e) {} };
 })();
 
-/* Firmenanfrage */
+/* Kontaktformular + Firmenanfrage → Backend (ALTCHA, Honeypot, Zeitstempel) */
 (function () {
-  var f = document.getElementById('b2b-form');
-  if (!f) return;
+  var API = 'https://func-contact-nowo-prd-szn-01.azurewebsites.net/api/contact';
+  var renderedAt = Date.now();
+  var MIN_AGE = 3500; // Backend verwirft Challenges, die jünger als 3 s sind
+  var MAIL = 'hello@nowo.space';
   var en = (document.documentElement.lang || '').indexOf('en') === 0;
-  f.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var L = en ? ['Name', 'Company', 'Email', 'Phone', 'People', 'Needs'] : ['Name', 'Firma', 'E-Mail', 'Telefon', 'Personen', 'Bedarf'];
-    var v = [f.name.value, f.company.value, f.email.value, f.phone.value, f.people.value, f.need.value];
-    var body = L.map(function (k, i) { return k + ': ' + v[i]; }).join('\n');
-    var subj = (en ? 'Company offer request: ' : 'Firmenanfrage: ') + f.company.value;
-    window.location.href = 'mailto:hello@nowo.space?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+  var T = en
+    ? { ok: "Thanks for your message! We'll get back to you as soon as possible.",
+        err: 'Your message could not be sent. Please try again or email us directly at ' }
+    : { ok: 'Danke für deine Nachricht! Wir melden uns so schnell wie möglich.',
+        err: 'Deine Nachricht konnte nicht gesendet werden. Bitte versuche es erneut oder schreibe uns direkt an ' };
+
+  function val(form, n) { var el = form.elements[n]; return el ? String(el.value || '') : ''; }
+
+  function wire(form, buildMessage) {
+    var btn = form.querySelector('button[type="submit"]');
+    var widget = form.querySelector('altcha-widget');
+    var status = form.querySelector('.form-status');
+    var state = 'unverified', payload = '', verifyStart = Date.now(), busy = false;
+
+    function sync() { if (btn) btn.disabled = busy || state !== 'verified'; }
+    function clear() { if (status) { status.textContent = ''; status.className = 'form-status full'; } }
+    function show(kind) {
+      if (!status) return;
+      clear();
+      status.classList.add(kind === 'ok' ? 'is-ok' : 'is-err');
+      if (kind === 'ok') { status.textContent = T.ok; return; }
+      status.appendChild(document.createTextNode(T.err));
+      var a = document.createElement('a'); a.href = 'mailto:' + MAIL; a.textContent = MAIL;
+      status.appendChild(a);
+      status.appendChild(document.createTextNode('.'));
+    }
+    function freshChallenge() {
+      payload = ''; state = 'unverified'; sync();
+      if (!widget) return;
+      try {
+        if (typeof widget.reset === 'function') widget.reset();
+        if (typeof widget.verify === 'function') widget.verify(); // sofort neu lösen, kein Klick-Flow
+      } catch (e) {}
+    }
+
+    sync();
+    if (widget) {
+      widget.addEventListener('statechange', function (ev) {
+        var d = ev.detail || {};
+        state = d.state || 'unverified';
+        if (state === 'verifying') verifyStart = Date.now();
+        if (state === 'verified') payload = d.payload || '';
+        if (state === 'expired') { freshChallenge(); return; }
+        if (state === 'error') show('err');
+        sync();
+      });
+      if (window.customElements) {
+        var t = setTimeout(function () { if (!customElements.get('altcha-widget')) show('err'); }, 10000);
+        customElements.whenDefined('altcha-widget').then(function () { clearTimeout(t); });
+      }
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (busy || state !== 'verified') return;
+      busy = true; sync(); clear();
+      if (btn) btn.setAttribute('aria-busy', 'true');
+      form.setAttribute('aria-busy', 'true');
+
+      var hidden = form.querySelector('input[name="altcha"]');
+      var data = {
+        name: val(form, 'name').trim(),
+        email: val(form, 'email').trim(),
+        message: buildMessage(form).slice(0, 5000),
+        lang: en ? 'en' : 'de',
+        website: val(form, 'website'),
+        formRenderedAt: renderedAt,
+        altcha: (hidden && hidden.value) || payload
+      };
+      var wait = Math.max(0, verifyStart + MIN_AGE - Date.now());
+      var ctrl = window.AbortController ? new AbortController() : null;
+      var timer;
+
+      new Promise(function (r) { setTimeout(r, wait); })
+        .then(function () {
+          if (ctrl) timer = setTimeout(function () { ctrl.abort(); }, 20000);
+          return fetch(API, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+            credentials: 'omit',
+            signal: ctrl ? ctrl.signal : undefined
+          });
+        })
+        .then(function (r) { return r.status === 200; }, function () { return false; })
+        .then(function (ok) {
+          clearTimeout(timer);
+          busy = false;
+          if (btn) btn.removeAttribute('aria-busy');
+          form.removeAttribute('aria-busy');
+          if (ok) form.reset();
+          show(ok ? 'ok' : 'err');
+          freshChallenge(); // jede Challenge ist nur einmal verwendbar
+        });
+    });
+  }
+
+  var contact = document.getElementById('contact-form');
+  if (contact) wire(contact, function (f) { return val(f, 'message'); });
+
+  var b2b = document.getElementById('b2b-form');
+  if (b2b) wire(b2b, function (f) {
+    return [
+      'Firmenanfrage',
+      'Firma: ' + val(f, 'company').trim(),
+      'Telefon: ' + (val(f, 'phone').trim() || '-'),
+      'Personen: ' + val(f, 'people'),
+      'Bedarf: ' + (val(f, 'need').trim() || '-')
+    ].join('\n');
   });
 })();

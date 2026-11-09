@@ -17,7 +17,8 @@
 - Slogan: Near Office statt Home Office
 - Firmen: Teamangebot nach Anforderungen (Einzelplätze, Fix Desks, Geschäftsadresse, Sitzungszimmer), Preis auf Anfrage
 - Grenzgänger: wenige Minuten von der Grenze nach Österreich; Arbeitstage im Nowo zählen als Arbeit in der Schweiz, nicht als Homeoffice im Wohnstaat (50-%-Regel Telearbeit, Quelle BSV: https://www.bsv.admin.ch/de/telearbeit)
-- Virtual Office: Postannahme, Handelsregister-Eintrag möglich, Firmenschild und Briefkasten, Sitzungszimmer zu Mitgliederpreisen
+- Virtual Office: c/o-Adresse ([Firmenname], c/o Nowo Coworking Space GmbH, Bahnhofstrasse 14, 9443 Widnau), Postannahme, Handelsregister-Eintrag mit c/o-Adresse (Nowo als Domizilhalterin), Firmenschild und Briefkasten, Sitzungszimmer zu Mitgliederpreisen
+- Adresse ohne c/o ([Firmenname], Bahnhofstrasse 14, 9443 Widnau): nur mit eigenem Arbeitsplatz bei Nowo, z. B. beim Fix Desk als kostenpflichtige Option
 - Sitzungszimmer: nur für Mitglieder buchbar
 
 ## Preise (CHF, exkl. MwSt.)
@@ -28,7 +29,7 @@
 - Once a Week: 125 pro Monat (1 Tag pro Woche)
 - Twice a Week: 210 pro Monat (2 Tage pro Woche)
 - Weekend: 125 pro Monat (Samstag & Sonntag)
-- Virtual Office: 100 pro Monat (Domiziladresse in Widnau, Postannahme)
+- Virtual Office: 100 pro Monat (c/o-Domiziladresse in Widnau, Postannahme)
 - Sitzungszimmer: 35 pro Stunde, ab 4 Std. 30 pro Stunde, ab 8 Std. 25 pro Stunde (31 m², 12 Stühle, Kamera, 65"-Bildschirm mit Miracast, Gratis-Kaffee)
 
 Mindestlaufzeit: Monatsabo 1 Monat, Jahresabo 1 Jahr. Tages- und Halbtagespässe ohne Bindung.
@@ -55,4 +56,4 @@ Mindestlaufzeit: Monatsabo 1 Monat, Jahresabo 1 Jahr. Tages- und Halbtagespässe
 - [Impressum](https://nowo.space/impressum.html)
 - [Datenschutz](https://nowo.space/datenschutz.html)
 
-Stand: 16. Oktober 2026
+Stand: 9. November 2026

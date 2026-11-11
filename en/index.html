@@ -359,7 +359,7 @@
 <meta name="theme-color" content="#F5F2EC">
 <link rel="preconnect" href="https://nowocoworkingspace-dkcscqdjdsbnhveu.westeurope-01.azurewebsites.net" crossorigin>
 <link rel="preload" href="../assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/style.css?v=2">
+<link rel="stylesheet" href="../assets/style.css?v=3">
 <link rel="icon" type="image/png" href="../assets/img/nowo-logo.png">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <script>document.documentElement.classList.add("js")</script>
@@ -404,6 +404,7 @@
       <a class="nav-link" href="coworking-for-companies.html">For companies</a>
       <a class="nav-link" href="location.html">Location</a>
       <a class="nav-link" href="about.html">About us</a>
+      <a class="nav-link" href="#events">Events</a>
       <a class="nav-link" href="#kontakt">Contact</a>
       <span class="langtog" role="group" aria-label="Language"><a class="langbtn" href="../" hreflang="de-CH" lang="de">DE</a><a class="langbtn" href="./" hreflang="en" lang="en" aria-current="true">EN</a></span>
       <a class="btn btn-primary" href="https://booking.nowo.space" target="_blank" rel="noopener">Book a desk</a>
@@ -416,6 +417,7 @@
     <a href="coworking-for-companies.html">For companies</a>
     <a href="location.html">Location</a>
     <a href="about.html">About us</a>
+    <a href="#events">Events</a>
     <a href="#kontakt">Contact</a>
     <span class="langtog" style="margin-top: var(--space-3); align-self: flex-start;" role="group" aria-label="Language"><a class="langbtn" href="../" hreflang="de-CH" lang="de">DE</a><a class="langbtn" href="./" hreflang="en" lang="en" aria-current="true">EN</a></span>
   </nav>
@@ -546,6 +548,60 @@
   </section>
 </div>
 </div>
+
+<div class="band-green">
+<div class="wrap">
+  <section class="section" id="events" aria-labelledby="events-title">
+    <div class="sec-head">
+      <p class="kicker">Events</p>
+      <h2 class="sec-title" id="events-title">Meet, learn, connect.</h2>
+      <p class="sec-intro">Nowo regularly hosts events for networking, learning and sharing ideas. They are open to members and guests from the Rhine Valley. Drop by and get to know the community.</p>
+    </div>
+    <div class="b2b ev">
+      <div class="b2b-main">
+        <p class="kicker ev-tag">Featured event</p>
+        <h3>KI-Stammtisch Widnau <span class="ev-sub">(AI Meetup, held in German)</span></h3>
+        <p>An open meetup for anyone interested in artificial intelligence: exchange, practical examples and community. Organised by thinking.ch, hosted at Nowo in Widnau.</p>
+        <ul class="checks"><li>Open exchange</li><li>Practical examples</li><li>Open to everyone interested</li><li>Organised by thinking.ch</li></ul>
+        <div class="ev-actions">
+          <a class="btn btn-primary" href="https://2fnrd7.share-eu1.hsforms.com/268AyE_4cShadTdYG9SP0MA" target="_blank" rel="noopener">Register now →</a>
+          <a class="btn btn-ghost" href="https://thinking.ch/ki-stammtisch/" target="_blank" rel="noopener">Learn more</a>
+        </div>
+        <details class="ev-form" id="events-form">
+          <summary>Register right here</summary>
+          <div class="ev-form-body">
+            <p class="ev-form-status" data-loading>Loading the registration form.</p>
+            <p class="ev-form-status" data-error hidden>The form could not be loaded. Please use “Register now” instead.</p>
+            <div class="hs-form-frame" data-region="eu1" data-form-id="ebc03213-fe1c-4a16-9d4d-d606f523f430" data-portal-id="147235147"></div>
+          </div>
+        </details>
+      </div>
+      <div class="b2b-side">
+        <h3>All upcoming events</h3>
+        <p>You’ll find all public events at Nowo in our event calendar, where you can also register directly.</p>
+        <a class="btn btn-secondary" href="https://booking.nowo.space/events" target="_blank" rel="noopener">View event calendar →</a>
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+<script>
+(function () {
+  var d = document.getElementById('events-form');
+  if (!d) return;
+  d.addEventListener('toggle', function () {
+    if (!d.open || d.getAttribute('data-loaded')) return;
+    d.setAttribute('data-loaded', '1');
+    var loading = d.querySelector('[data-loading]'), error = d.querySelector('[data-error]');
+    var s = document.createElement('script');
+    s.src = 'https://js-eu1.hsforms.net/forms/embed/147235147.js';
+    s.defer = true;
+    s.onload = function () { if (loading) loading.hidden = true; };
+    s.onerror = function () { if (loading) loading.hidden = true; if (error) error.hidden = false; };
+    document.head.appendChild(s);
+  });
+})();
+</script>
 
 <div class="band-dark">
 <div class="wrap">

@@ -359,7 +359,7 @@
 <meta name="theme-color" content="#F5F2EC">
 <link rel="preconnect" href="https://nowocoworkingspace-dkcscqdjdsbnhveu.westeurope-01.azurewebsites.net" crossorigin>
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=2">
+<link rel="stylesheet" href="assets/style.css?v=3">
 <link rel="icon" type="image/png" href="assets/img/nowo-logo.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <script>document.documentElement.classList.add("js")</script>
@@ -404,6 +404,7 @@
       <a class="nav-link" href="coworking-firmen.html">Für Firmen</a>
       <a class="nav-link" href="standort.html">Standort</a>
       <a class="nav-link" href="ueber-uns.html">Über uns</a>
+      <a class="nav-link" href="#events">Events</a>
       <a class="nav-link" href="#kontakt">Kontakt</a>
       <span class="langtog" role="group" aria-label="Sprache"><a class="langbtn" href="./" hreflang="de-CH" lang="de" aria-current="true">DE</a><a class="langbtn" href="en/" hreflang="en" lang="en">EN</a></span>
       <a class="btn btn-primary" href="https://booking.nowo.space" target="_blank" rel="noopener">Platz buchen</a>
@@ -416,6 +417,7 @@
     <a href="coworking-firmen.html">Für Firmen</a>
     <a href="standort.html">Standort</a>
     <a href="ueber-uns.html">Über uns</a>
+    <a href="#events">Events</a>
     <a href="#kontakt">Kontakt</a>
     <span class="langtog" style="margin-top: var(--space-3); align-self: flex-start;" role="group" aria-label="Sprache"><a class="langbtn" href="./" hreflang="de-CH" lang="de" aria-current="true">DE</a><a class="langbtn" href="en/" hreflang="en" lang="en">EN</a></span>
   </nav>
@@ -546,6 +548,60 @@
   </section>
 </div>
 </div>
+
+<div class="band-green">
+<div class="wrap">
+  <section class="section" id="events" aria-labelledby="events-title">
+    <div class="sec-head">
+      <p class="kicker">Events</p>
+      <h2 class="sec-title" id="events-title">Treffen, lernen, austauschen.</h2>
+      <p class="sec-intro">Bei Nowo finden regelmässig Events statt, zum Netzwerken, Lernen und Austauschen. Sie sind offen für Mitglieder und Gäste aus dem Rheintal. Komm vorbei und lerne die Community kennen.</p>
+    </div>
+    <div class="b2b ev">
+      <div class="b2b-main">
+        <p class="kicker ev-tag">Im Fokus</p>
+        <h3>KI-Stammtisch Widnau</h3>
+        <p>Ein offenes Meetup für alle, die sich für Künstliche Intelligenz interessieren: Austausch, Praxisbeispiele und Community. Organisiert von thinking.ch, zu Gast bei Nowo in Widnau.</p>
+        <ul class="checks"><li>Austausch auf Augenhöhe</li><li>Praxisbeispiele aus dem Alltag</li><li>Offen für alle Interessierten</li><li>Organisiert von thinking.ch</li></ul>
+        <div class="ev-actions">
+          <a class="btn btn-primary" href="https://2fnrd7.share-eu1.hsforms.com/268AyE_4cShadTdYG9SP0MA" target="_blank" rel="noopener">Jetzt anmelden →</a>
+          <a class="btn btn-ghost" href="https://thinking.ch/ki-stammtisch/" target="_blank" rel="noopener">Mehr erfahren</a>
+        </div>
+        <details class="ev-form" id="events-form">
+          <summary>Direkt hier anmelden</summary>
+          <div class="ev-form-body">
+            <p class="ev-form-status" data-loading>Das Anmeldeformular wird geladen.</p>
+            <p class="ev-form-status" data-error hidden>Das Formular konnte nicht geladen werden. Melde dich bitte über „Jetzt anmelden“ an.</p>
+            <div class="hs-form-frame" data-region="eu1" data-form-id="ebc03213-fe1c-4a16-9d4d-d606f523f430" data-portal-id="147235147"></div>
+          </div>
+        </details>
+      </div>
+      <div class="b2b-side">
+        <h3>Alle bevorstehenden Events</h3>
+        <p>Alle öffentlichen Events bei Nowo findest du in unserem Eventkalender. Dort kannst du dich auch direkt anmelden.</p>
+        <a class="btn btn-secondary" href="https://booking.nowo.space/events" target="_blank" rel="noopener">Zum Eventkalender →</a>
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+<script>
+(function () {
+  var d = document.getElementById('events-form');
+  if (!d) return;
+  d.addEventListener('toggle', function () {
+    if (!d.open || d.getAttribute('data-loaded')) return;
+    d.setAttribute('data-loaded', '1');
+    var loading = d.querySelector('[data-loading]'), error = d.querySelector('[data-error]');
+    var s = document.createElement('script');
+    s.src = 'https://js-eu1.hsforms.net/forms/embed/147235147.js';
+    s.defer = true;
+    s.onload = function () { if (loading) loading.hidden = true; };
+    s.onerror = function () { if (loading) loading.hidden = true; if (error) error.hidden = false; };
+    document.head.appendChild(s);
+  });
+})();
+</script>
 
 <div class="band-dark">
 <div class="wrap">

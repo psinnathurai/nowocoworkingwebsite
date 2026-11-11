@@ -363,3 +363,21 @@ html:not(.js) .logos { display: none; }
   .refs-body { justify-content: flex-start; padding: 20px 0 24px; }
   .refs-quote p { font-size: 16px; }
 }
+
+/* Events */
+.ev .ev-tag { margin-bottom: 10px; }
+.ev h3 .ev-sub { display: block; margin-top: 6px; font-size: 16px; font-weight: 400; letter-spacing: 0; color: var(--color-muted); }
+.ev-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.b2b .ev-actions .btn { margin-top: 0; }
+.ev-form { margin-top: 28px; padding-top: 20px; border-top: 2px solid var(--color-divider); }
+.ev-form summary { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; list-style: none; font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--color-accent-800); }
+.ev-form summary::-webkit-details-marker { display: none; }
+.ev-form summary::after { content: "+"; font-size: 20px; line-height: 1; transition: transform .2s ease; }
+.ev-form[open] summary::after { transform: rotate(45deg); }
+.ev-form summary:hover { color: var(--color-accent-900); }
+.ev-form summary:focus-visible { outline: 2px solid var(--color-accent-700); outline-offset: 4px; }
+.ev-form-body { margin-top: 16px; }
+.ev-form-status { font-size: 14px; color: var(--color-muted); margin: 0 0 8px; }
+@media (prefers-reduced-motion: reduce) { .ev-form summary::after { transition: none; } }
+@media (max-width: 1280px) and (min-width: 961px) { .topnav { gap: 14px; } .topnav a.nav-link { font-size: 13.5px; } }
+.topnav a.nav-link, .topnav .btn, .avail-badge { white-space: nowrap; }

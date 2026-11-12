@@ -6,7 +6,7 @@
    - name:  Firmenname (wird auch als Alt-Text verwendet)
    - logo:  Dateiname im Ordner assets/logos/  (null = Name wird als Text
             gezeigt, bis die Logo-Datei vorliegt)
-   - url:   Website der Firma (öffnet in neuem Tab)
+   - url:   Website der Firma (öffnet in neuem Tab); null = ohne Link
    Optionale Felder:
    - scale:    optischer Ausgleich der Höhe, z. B. 1.25 für runde/quadratische
                Logos, 0.85 für sehr breite (Standard 1)
@@ -48,6 +48,12 @@ var NOWO_MEMBER_LOGOS = [
   { name: "assopersonal",      logo: "assopersonal.png",     url: "https://www.assopersonal.ch" },
   { name: "Squaretech",        logo: "squaretech.png",       url: "https://squaretech.ch/", scale: 0.8 },
   { name: "EMTI Lifestyle GmbH", logo: "emti.png",          url: "https://emti-lifestyle.ch", scale: 0.85 },
+  { name: "KlarDok",           logo: "klardok.png",          url: "https://klardok.ch" },
+  { name: "thinking services ag", logo: "thinking.png",      url: "https://thinking.ch", scale: 0.9 },
+  { name: "ING4U",             logo: "ing4u.png",            url: null, scale: 0.85, dim: false,
+    author: "Egzon",
+    quote_de: "Das Arbeiten im Nowo ist für mich eine tolle Sache, weil es uns als jungem Unternehmen grösstmögliche Flexibilität bietet und ganz in der Nähe meines Wohnorts liegt.",
+    quote_en: "Working at Nowo is great for me: as a young company, it gives us maximum flexibility, and it is right near where I live." },
   { name: "Netzwerk Rheintal", logo: "netzwerk-rheintal.png", url: "https://netzwerk-rheintal.ch/", scale: 1.15, dim: false }
 ];
 
@@ -74,8 +80,8 @@ var NOWO_MEMBER_LOGOS = [
     s.setAttribute("aria-roledescription", "slide");
     s.setAttribute("aria-label", (i + 1) + " " + T.slide + " " + n + ": " + m.name);
 
-    var logo = el("a", "refs-logo");
-    logo.href = m.url; logo.target = "_blank"; logo.rel = "noopener";
+    var logo = el(m.url ? "a" : "div", "refs-logo");
+    if (m.url) { logo.href = m.url; logo.target = "_blank"; logo.rel = "noopener"; }
     if (m.scale) logo.style.setProperty("--logo-scale", m.scale);
     if (m.plate === "dark") logo.classList.add("has-plate");
     if (m.dim === false) logo.classList.add("no-dim");
@@ -99,9 +105,11 @@ var NOWO_MEMBER_LOGOS = [
       body.appendChild(el("p", "refs-name", m.name));
       body.appendChild(el("p", "refs-meta", T.member));
     }
-    var link = el("a", "refs-link", T.visit + " ↗");
-    link.href = m.url; link.target = "_blank"; link.rel = "noopener";
-    body.appendChild(link);
+    if (m.url) {
+      var link = el("a", "refs-link", T.visit + " ↗");
+      link.href = m.url; link.target = "_blank"; link.rel = "noopener";
+      body.appendChild(link);
+    }
     s.appendChild(body);
     return s;
   }

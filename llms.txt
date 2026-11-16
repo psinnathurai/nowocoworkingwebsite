@@ -23,7 +23,7 @@
 
 ## Preise (CHF, exkl. MwSt.)
 - Halbtagespass: 20 pro Halbtag
-- Tagespass: 35 pro Tag
+- Tagespass: 35 pro Tag (online als Drop-in kaufbar, ohne Mitgliedschaft: https://booking.nowo.space/drop-in/c38a4fb7e4c081a42675186a764eb520#/6c663aa3a62615bc4eb693c7b21d54fc/drop-in-checkout/c38a4fb7e4c081a42675186a764eb520)
 - Flex Desk: 300 pro Monat (offener Platz, 24/7)
 - Fix Desk: 450 pro Monat (fester Platz, 24/7)
 - Once a Week: 125 pro Monat (1 Tag pro Woche)

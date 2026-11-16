@@ -13,6 +13,8 @@
    - plate:    "dark" = dunkle Fläche hinter dem Logo (für Logos mit weisser Schrift)
    - dim:      false = Logo immer in Originalfarbe (für sehr helle Logos)
    - quote_de / quote_en / author: Zitat, wird im Slide angezeigt
+   - role:     Tätigkeit/Beschreibung, ersetzt «Mitglied der Nowo-Community»
+               (mit author: «Name · role»)
    Eintrag entfernen (z. B. wenn ein Mitglied die Zustimmung zurückzieht):
    Block löschen, optional die Datei in assets/logos/ ebenfalls löschen.
    ========================================================================= */
@@ -54,6 +56,9 @@ var NOWO_MEMBER_LOGOS = [
     author: "Egzon",
     quote_de: "Das Arbeiten im Nowo ist für mich eine tolle Sache, weil es uns als jungem Unternehmen grösstmögliche Flexibilität bietet und ganz in der Nähe meines Wohnorts liegt.",
     quote_en: "Working at Nowo is great for me: as a young company, it gives us maximum flexibility, and it is right near where I live." },
+  { name: "SandSnow",          logo: "sandsnow.png",         url: "https://sandsnow.ch", plate: "dark",
+    author: "Martin Guerra Heredia",
+    role: "Consultant for special projects & Emerging Markets" },
   { name: "Netzwerk Rheintal", logo: "netzwerk-rheintal.png", url: "https://netzwerk-rheintal.ch/", scale: 1.15, dim: false }
 ];
 
@@ -103,7 +108,7 @@ var NOWO_MEMBER_LOGOS = [
       body.appendChild(el("p", "refs-meta", m.author + " · " + m.name));
     } else {
       body.appendChild(el("p", "refs-name", m.name));
-      body.appendChild(el("p", "refs-meta", T.member));
+      body.appendChild(el("p", "refs-meta", m.role ? (m.author ? m.author + " · " : "") + m.role : T.member));
     }
     if (m.url) {
       var link = el("a", "refs-link", T.visit + " ↗");

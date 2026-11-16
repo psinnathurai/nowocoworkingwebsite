@@ -381,3 +381,9 @@ html:not(.js) .logos { display: none; }
 @media (prefers-reduced-motion: reduce) { .ev-form summary::after { transition: none; } }
 @media (max-width: 1280px) and (min-width: 961px) { .topnav { gap: 14px; } .topnav a.nav-link { font-size: 13.5px; } }
 .topnav a.nav-link, .topnav .btn, .avail-badge { white-space: nowrap; }
+/* Sitzungszimmer-Galerie: Hochformat-Bilder füllen die Kacheln, ohne die Zeilenhöhe zu bestimmen */
+.mosaic-meet picture { display: block; min-height: 0; overflow: hidden; }
+.mosaic-meet picture:first-child img { aspect-ratio: 3 / 2; height: auto; }
+.mosaic-meet picture:not(:first-child) { position: relative; }
+.mosaic-meet picture:not(:first-child) img { position: absolute; inset: 0; }
+@media (max-width: 760px) { .mosaic-meet picture:not(:first-child) { aspect-ratio: 3 / 4; } }

@@ -56,9 +56,11 @@ var NOWO_MEMBER_LOGOS = [
     author: "Egzon",
     quote_de: "Das Arbeiten im Nowo ist für mich eine tolle Sache, weil es uns als jungem Unternehmen grösstmögliche Flexibilität bietet und ganz in der Nähe meines Wohnorts liegt.",
     quote_en: "Working at Nowo is great for me: as a young company, it gives us maximum flexibility, and it is right near where I live." },
-  { name: "SandSnow",          logo: "sandsnow.png",         url: "https://sandsnow.ch", plate: "dark",
+  { name: "SandSnow",          logo: "sandsnow.png",         url: "https://sandsnow.ch",
     author: "Martin Guerra Heredia",
-    role: "Consultant for special projects & Emerging Markets" },
+    role: "Consultant for special projects & Emerging Markets",
+    quote_de: "Selbstständiges Arbeiten erfordert Räume, die bewusst dazu gestaltet sind, sich vom Alltag im Homeoffice zu lösen. Eine visuell harmonische Atmosphäre erweist sich dabei als strategische Investition in das mentale Wohlbefinden und erleichtert zudem die Integration in ein dynamisches, kollaboratives Unternehmensnetzwerk, das die berufliche Weiterentwicklung nachhaltig bereichert. Ich freue mich sehr über die Zusammenarbeit mit Nowo!",
+    quote_en: "Working independently requires spaces that are deliberately designed to break away from everyday life in the home office. A visually harmonious atmosphere proves to be a strategic investment in mental well-being and also makes it easier to become part of a dynamic, collaborative business network that enriches your professional development in a lasting way. I'm really looking forward to working with Nowo!" },
   { name: "Netzwerk Rheintal", logo: "netzwerk-rheintal.png", url: "https://netzwerk-rheintal.ch/", scale: 1.15, dim: false }
 ];
 

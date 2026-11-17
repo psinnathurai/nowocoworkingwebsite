@@ -56,7 +56,7 @@ var NOWO_MEMBER_LOGOS = [
     author: "Egzon",
     quote_de: "Das Arbeiten im Nowo ist für mich eine tolle Sache, weil es uns als jungem Unternehmen grösstmögliche Flexibilität bietet und ganz in der Nähe meines Wohnorts liegt.",
     quote_en: "Working at Nowo is great for me: as a young company, it gives us maximum flexibility, and it is right near where I live." },
-  { name: "SandSnow",          logo: "sandsnow.png",         url: "https://sandsnow.ch",
+  { name: "SandSnow",          logo: "sandsnow.png",         url: "https://sandsnow.ch", scale: 0.85,
     author: "Martin Guerra Heredia",
     role: "Consultant for special projects & Emerging Markets",
     quote_de: "Selbstständiges Arbeiten erfordert Räume, die bewusst dazu gestaltet sind, sich vom Alltag im Homeoffice zu lösen. Eine visuell harmonische Atmosphäre erweist sich dabei als strategische Investition in das mentale Wohlbefinden und erleichtert zudem die Integration in ein dynamisches, kollaboratives Unternehmensnetzwerk, das die berufliche Weiterentwicklung nachhaltig bereichert. Ich freue mich sehr über die Zusammenarbeit mit Nowo!",

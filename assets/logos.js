@@ -21,7 +21,6 @@
 var NOWO_AUTOPLAY_MS = 5000; // Zeit pro Slide in Millisekunden
 
 var NOWO_MEMBER_LOGOS = [
-  { name: "Swiss Life Select", logo: "swisslife-select.png", url: "https://www.swisslife-select.ch" },
   { name: "Hechenbros",        logo: "hechenbros.svg",       url: "https://hechenbros.ch",
     author: "Klemens",
     quote_de: "Das Nowo ist für mich der ideale Mix aus professionellem Arbeitsplatz und entspannter Atmosphäre: schnelle Verbindung, gute Arbeitsplätze, genügend Parkplätze, Rückzugsmöglichkeiten für Calls und Kaffee, der den Namen verdient. Dazu kommen Leute, von denen man nebenbei noch etwas lernt.",
@@ -38,20 +37,10 @@ var NOWO_MEMBER_LOGOS = [
     author: "Delia",
     quote_de: "Wunderbar, wenn man in der Umgebung ist und einen voll ausgestatteten Arbeitsplatz für zwischendurch oder langfristig sucht! Im NOWO findet man eine richtige Büroumgebung, in der es an nichts fehlt: von einer tollen Community, mit der man sich vernetzen kann, über Verpflegungsräume bis hin zu separaten Kabinen für wichtige Calls und Meetings ist alles vorhanden.",
     quote_en: "Wonderful if you're in the area and looking for a fully equipped workspace, whether for the odd day or the long term! At NOWO you'll find a proper office environment that lacks nothing: from a great community to network with, to kitchen and break areas, to separate booths for important calls and meetings, it's all there." },
-  { name: "baseVISION",        logo: "basevision.png",       url: "https://www.basevision.ch" },
-  { name: "SXP Consulting",    logo: "sxp-consulting.svg",   url: "https://sxp-consulting.ch/", scale: 0.9 },
-  { name: "TC Training",       logo: "tc-training.png",      url: "https://tc-training.fit", plate: "dark" },
   { name: "NDynamics",         logo: null,                   url: "https://www.ndynamics.ch",
     author: "Nando",
     quote_de: "Wer auf moderne Einrichtung steht, ist im Nowo bestens bedient. Offene Menschen, eine tolle Atmosphäre und dank CleverKey rund um die Uhr Zugang, das schätze ich besonders. Ein Tipp für jedermann.",
     quote_en: "If you like modern interiors, Nowo is the place for you. Open-minded people, a great atmosphere and round-the-clock access thanks to CleverKey, which I particularly appreciate. A tip for everyone." },
-  { name: "oceanleaf",         logo: "oceanleaf.png",        url: "https://oceanleaf.ch" },
-  { name: "AdVision",          logo: "advision.svg",         url: "https://advision.swiss" },
-  { name: "assopersonal",      logo: "assopersonal.png",     url: "https://www.assopersonal.ch" },
-  { name: "Squaretech",        logo: "squaretech.png",       url: "https://squaretech.ch/", scale: 0.8 },
-  { name: "EMTI Lifestyle GmbH", logo: "emti.png",          url: "https://emti-lifestyle.ch", scale: 0.85 },
-  { name: "KlarDok",           logo: "klardok.png",          url: "https://klardok.ch" },
-  { name: "thinking services ag", logo: "thinking.png",      url: "https://thinking.ch", scale: 0.9 },
   { name: "ING4U",             logo: "ing4u.png",            url: null, scale: 0.85, dim: false,
     author: "Egzon",
     quote_de: "Das Arbeiten im Nowo ist für mich eine tolle Sache, weil es uns als jungem Unternehmen grösstmögliche Flexibilität bietet und ganz in der Nähe meines Wohnorts liegt.",
@@ -61,6 +50,17 @@ var NOWO_MEMBER_LOGOS = [
     role: "Consultant for special projects & Emerging Markets",
     quote_de: "Selbstständiges Arbeiten erfordert Räume, die bewusst dazu gestaltet sind, sich vom Alltag im Homeoffice zu lösen. Eine visuell harmonische Atmosphäre erweist sich dabei als strategische Investition in das mentale Wohlbefinden und erleichtert zudem die Integration in ein dynamisches, kollaboratives Unternehmensnetzwerk, das die berufliche Weiterentwicklung nachhaltig bereichert. Ich freue mich sehr über die Zusammenarbeit mit Nowo!",
     quote_en: "Working independently requires spaces that are deliberately designed to break away from everyday life in the home office. A visually harmonious atmosphere proves to be a strategic investment in mental well-being and also makes it easier to become part of a dynamic, collaborative business network that enriches your professional development in a lasting way. I'm really looking forward to working with Nowo!" },
+  { name: "Swiss Life Select", logo: "swisslife-select.png", url: "https://www.swisslife-select.ch" },
+  { name: "baseVISION",        logo: "basevision.png",       url: "https://www.basevision.ch" },
+  { name: "SXP Consulting",    logo: "sxp-consulting.svg",   url: "https://sxp-consulting.ch/", scale: 0.9 },
+  { name: "TC Training",       logo: "tc-training.png",      url: "https://tc-training.fit", plate: "dark" },
+  { name: "oceanleaf",         logo: "oceanleaf.png",        url: "https://oceanleaf.ch" },
+  { name: "AdVision",          logo: "advision.svg",         url: "https://advision.swiss" },
+  { name: "assopersonal",      logo: "assopersonal.png",     url: "https://www.assopersonal.ch" },
+  { name: "Squaretech",        logo: "squaretech.png",       url: "https://squaretech.ch/", scale: 0.8 },
+  { name: "EMTI Lifestyle GmbH", logo: "emti.png",          url: "https://emti-lifestyle.ch", scale: 0.85 },
+  { name: "KlarDok",           logo: "klardok.png",          url: "https://klardok.ch" },
+  { name: "thinking services ag", logo: "thinking.png",      url: "https://thinking.ch", scale: 0.9 },
   { name: "Netzwerk Rheintal", logo: "netzwerk-rheintal.png", url: "https://netzwerk-rheintal.ch/", scale: 1.15, dim: false }
 ];
 

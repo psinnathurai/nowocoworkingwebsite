@@ -57,8 +57,8 @@
   var priv = en ? '../datenschutz.html#ga' : 'datenschutz.html#ga';
   if (/\/(impressum|datenschutz)\.html$/.test(location.pathname)) priv = 'datenschutz.html#ga';
   var T = en
-    ? { text: 'We use Google Analytics to improve this website. It only runs if you accept.', more: 'Privacy policy', yes: 'Accept', no: 'Decline' }
-    : { text: 'Wir nutzen Google Analytics, um die Website zu verbessern. Es läuft nur, wenn du zustimmst.', more: 'Datenschutz', yes: 'Akzeptieren', no: 'Ablehnen' };
+    ? { text: 'We use Google Analytics and Google Ads to improve this website and measure our ads. Both only run if you accept.', more: 'Privacy policy', yes: 'Accept', no: 'Decline' }
+    : { text: 'Wir nutzen Google Analytics und Google Ads, um die Website zu verbessern und unsere Werbung zu messen. Beides läuft nur, wenn du zustimmst.', more: 'Datenschutz', yes: 'Akzeptieren', no: 'Ablehnen' };
   var bar;
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
@@ -209,7 +209,11 @@
           busy = false;
           if (btn) btn.removeAttribute('aria-busy');
           form.removeAttribute('aria-busy');
-          if (ok) form.reset();
+          if (ok) {
+            form.reset();
+            // Google-Ads-Conversion «Registrierung», nur mit Einwilligung (nowoGA ist dann gesetzt)
+            try { if (window.nowoGA && typeof window.gtag === 'function') window.gtag('event', 'conversion', { send_to: 'AW-17144079015/UeYICOTu2tEaEKfF9-4_' }); } catch (e2) {}
+          }
           show(ok ? 'ok' : 'err');
           freshChallenge(); // jede Challenge ist nur einmal verwendbar
         });

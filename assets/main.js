@@ -234,3 +234,19 @@
     ].join('\n');
   });
 })();
+
+/* Google-Ads-Conversions für Klicks auf Telefon, E-Mail und Buchungsportal (nur mit Einwilligung) */
+(function () {
+  var AW = 'AW-17144079015/';
+  var KONTAKT = AW + 'FZgVCP2U4bodEKfF9-4_';   // Kontakt-Klick Website (Telefon/E-Mail)
+  var BUCHUNG = AW + 'G5eNCODM6bodEKfF9-4_';   // Klick Buchungsportal (booking.nowo.space)
+  document.addEventListener('click', function (e) {
+    if (!window.nowoGA || typeof window.gtag !== 'function') return;
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    var to = /^(tel:|mailto:)/i.test(h) ? KONTAKT : (/^https?:\/\/booking\.nowo\.space/i.test(h) ? BUCHUNG : null);
+    if (!to) return;
+    try { window.gtag('event', 'conversion', { send_to: to, transport_type: 'beacon' }); } catch (err) {}
+  }, true);
+})();

@@ -61,6 +61,7 @@ var NOWO_MEMBER_LOGOS = [
   { name: "EMTI Lifestyle GmbH", logo: "emti.png",          url: "https://emti-lifestyle.ch", scale: 0.85 },
   { name: "KlarDok",           logo: "klardok.png",          url: "https://klardok.ch" },
   { name: "thinking services ag", logo: "thinking.png",      url: "https://thinking.ch", scale: 0.9 },
+  { name: "Potenzialmanufaktur", logo: "potenzialmanufaktur.png", url: "https://potenzialmanufaktur.ch/?rest_route=/rapi/dynamic-qr-code&qr=LLO1794908507", scale: 1.1 },
   { name: "Netzwerk Rheintal", logo: "netzwerk-rheintal.png", url: "https://netzwerk-rheintal.ch/", scale: 1.15, dim: false }
 ];
 

@@ -19,7 +19,7 @@
 - Grenzgänger: wenige Minuten von der Grenze nach Österreich; Arbeitstage im Nowo zählen als Arbeit in der Schweiz, nicht als Homeoffice im Wohnstaat (50-%-Regel Telearbeit, Quelle BSV: https://www.bsv.admin.ch/de/telearbeit)
 - Virtual Office: c/o-Adresse ([Firmenname], c/o Nowo Coworking Space GmbH, Bahnhofstrasse 14, 9443 Widnau), Postannahme, Handelsregister-Eintrag mit c/o-Adresse (Nowo als Domizilhalterin), Firmenschild und Briefkasten, Sitzungszimmer zu Mitgliederpreisen
 - Adresse ohne c/o ([Firmenname], Bahnhofstrasse 14, 9443 Widnau): nur mit eigenem Arbeitsplatz bei Nowo, z. B. beim Fix Desk als kostenpflichtige Option
-- Sitzungszimmer: nur für Mitglieder buchbar
+- Sitzungszimmer: auch ohne Mitgliedschaft online buchbar (https://booking.nowo.space/book), Türzugang per Link nach der Buchung
 
 ## Preise (CHF, exkl. MwSt.)
 - Halbtagespass: 20 pro Halbtag
